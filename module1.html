@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Module 1 | Domain, Hosting & Website Setup</title>
+
+    <meta name="description"
+        content="Learn domain names, hosting, DNS, SSL, website setup and basic website security through practical examples and activities.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-main">
+                    WEB & E-COMMERCE
+                </span>
+
+                <span class="logo-sub">
+                    Learning Lab
+                </span>
+
+            </a>
+
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open Menu">
+
+                ☰
+
+            </button>
+
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="modules.html" class="active">
+                    Modules
+                </a>
+
+                <a href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="index.html#capstone">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         MODULE HERO
+    ========================== -->
+
+    <main>
+
+        <section class="module-hero">
+
+            <div class="container">
+
+                <a href="modules.html"
+                    class="back-link">
+
+                    ← Back to Modules
+
+                </a>
+
+
+                <span class="module-hero-number">
+                    MODULE 01
+                </span>
+
+
+                <h1>
+                    Domain, Hosting &
+                    Website Setup
+                </h1>
+
+
+                <p>
+                    Understand how websites get their identity,
+                    where they live, how domains connect to hosting,
+                    and how HTTPS and basic security protect a website.
+                </p>
+
+
+                <div class="module-meta">
+
+                    <span>
+                        🎯 Foundation
+                    </span>
+
+                    <span>
+                        🛠️ Practical
+                    </span>
+
+                    <span>
+                        📚 Beginner Friendly
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LEARNING OBJECTIVES
+        ========================== -->
+
+        <section class="lesson-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        WHAT YOU WILL LEARN
+                    </span>
+
+                    <h2>
+                        By the end of this module
+                    </h2>
+
+                </div>
+
+
+                <div class="objective-grid">
+
+                    <div class="objective-card">
+
+                        <span>01</span>
+
+                        <p>
+                            Explain what a domain name,
+                            URL and domain extension are.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <span>02</span>
+
+                        <p>
+                            Understand different types
+                            of web hosting.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <span>03</span>
+
+                        <p>
+                            Explain how a domain connects
+                            to website hosting using DNS.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <span>04</span>
+
+                        <p>
+                            Understand HTTPS, SSL and
+                            basic website security.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 1
+             DOMAIN
+        ========================== -->
+
+        <section class="lesson-section lesson-light">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        01 · LEARN
+                    </span>
+
+                    <h2>
+                        What is a Domain Name?
+                    </h2>
+
+                </div>
+
+
+                <div class="lesson-content">
+
+                    <p>
+                        A <strong>domain name</strong> is the human-readable
+                        address people use to visit a website.
+                    </p>
+
+
+                    <div class="concept-box">
+
+                        <div class="concept-icon">
+                            🌐
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Example
+                            </h3>
+
+                            <p>
+                                <strong>google.com</strong> is a domain name.
+                            </p>
+
+                            <p>
+                                Instead of remembering a numerical
+                                IP address, users can type a simple
+                                domain name into their browser.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Domain Structure
+                    </h3>
+
+
+                    <div class="domain-example">
+
+                        <span class="domain-part">
+                            www
+                        </span>
+
+                        <span class="dot">
+                            .
+                        </span>
+
+                        <span class="domain-part main-part">
+                            example
+                        </span>
+
+                        <span class="dot">
+                            .
+                        </span>
+
+                        <span class="domain-part extension">
+                            com
+                        </span>
+
+                    </div>
+
+
+                    <div class="domain-explanation">
+
+                        <div>
+
+                            <strong>
+                                www
+                            </strong>
+
+                            <p>
+                                Subdomain / host name
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                example
+                            </strong>
+
+                            <p>
+                                Main domain name
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                .com
+                            </strong>
+
+                            <p>
+                                Domain extension
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Common Domain Extensions
+                    </h3>
+
+
+                    <div class="extension-grid">
+
+                        <div>
+                            <strong>.com</strong>
+                            <span>Commercial</span>
+                        </div>
+
+                        <div>
+                            <strong>.in</strong>
+                            <span>India</span>
+                        </div>
+
+                        <div>
+                            <strong>.org</strong>
+                            <span>Organization</span>
+                        </div>
+
+                        <div>
+                            <strong>.net</strong>
+                            <span>Network</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 2
+             URL
+        ========================== -->
+
+        <section class="lesson-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        UNDERSTAND
+                    </span>
+
+                    <h2>
+                        Domain vs URL
+                    </h2>
+
+                </div>
+
+
+                <div class="comparison-card">
+
+                    <div>
+
+                        <span class="comparison-label">
+                            DOMAIN
+                        </span>
+
+                        <h3>
+                            example.com
+                        </h3>
+
+                        <p>
+                            The main website address.
+                        </p>
+
+                    </div>
+
+
+                    <div class="comparison-divider">
+                        VS
+                    </div>
+
+
+                    <div>
+
+                        <span class="comparison-label">
+                            URL
+                        </span>
+
+                        <h3>
+                            https://example.com/about
+                        </h3>
+
+                        <p>
+                            The complete web address of
+                            a specific resource or page.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 3
+             HOSTING
+        ========================== -->
+
+        <section class="lesson-section lesson-light">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        02 · LEARN
+                    </span>
+
+                    <h2>
+                        What is Web Hosting?
+                    </h2>
+
+                </div>
+
+
+                <div class="lesson-content">
+
+                    <p>
+                        Web hosting is the service that provides
+                        the server space and infrastructure needed
+                        to make a website available on the internet.
+                    </p>
+
+
+                    <div class="analogy-box">
+
+                        <div class="analogy-item">
+
+                            <span>
+                                🏠
+                            </span>
+
+                            <strong>
+                                Hosting
+                            </strong>
+
+                            <p>
+                                Like the place where your website lives.
+                            </p>
+
+                        </div>
+
+
+                        <div class="analogy-arrow">
+                            +
+                        </div>
+
+
+                        <div class="analogy-item">
+
+                            <span>
+                                📍
+                            </span>
+
+                            <strong>
+                                Domain
+                            </strong>
+
+                            <p>
+                                Like the address people use to find it.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        Common Types of Hosting
+                    </h3>
+
+
+                    <div class="hosting-grid">
+
+                        <article>
+
+                            <span class="hosting-icon">
+                                👥
+                            </span>
+
+                            <h3>
+                                Shared Hosting
+                            </h3>
+
+                            <p>
+                                Multiple websites share resources
+                                on the same server.
+                            </p>
+
+                        </article>
+
+
+                        <article>
+
+                            <span class="hosting-icon">
+                                🖥️
+                            </span>
+
+                            <h3>
+                                VPS Hosting
+                            </h3>
+
+                            <p>
+                                A virtual server with dedicated
+                                allocated resources.
+                            </p>
+
+                        </article>
+
+
+                        <article>
+
+                            <span class="hosting-icon">
+                                ☁️
+                            </span>
+
+                            <h3>
+                                Cloud Hosting
+                            </h3>
+
+                            <p>
+                                Websites use infrastructure
+                                distributed across cloud servers.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <strong>
+                            💡 Remember
+                        </strong>
+
+                        <p>
+                            A domain and hosting are different things.
+                            A website normally needs an address
+                            and a place where its files and services run.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 4
+             HOSTING FEATURES
+        ========================== -->
+
+        <section class="lesson-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        CHECK BEFORE CHOOSING
+                    </span>
+
+                    <h2>
+                        Important Hosting Features
+                    </h2>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <strong>Storage</strong>
+                        <p>
+                            How much data can be stored.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <strong>Bandwidth</strong>
+                        <p>
+                            How much data can be transferred.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <strong>Backups</strong>
+                        <p>
+                            Options for recovering website data.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <strong>SSL</strong>
+                        <p>
+                            Support for secure HTTPS connections.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <strong>Uptime</strong>
+                        <p>
+                            How consistently the service remains available.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <strong>Support</strong>
+                        <p>
+                            Technical help provided by the hosting provider.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 5
+             DNS
+        ========================== -->
+
+        <section class="lesson-section lesson-light">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        03 · UNDERSTAND
+                    </span>
+
+                    <h2>
+                        How Domain & Hosting Connect
+                    </h2>
+
+                </div>
+
+
+                <div class="lesson-content">
+
+                    <p>
+                        DNS stands for
+                        <strong>Domain Name System</strong>.
+                    </p>
+
+                    <p>
+                        DNS helps direct a domain name to the
+                        appropriate server or service.
+                    </p>
+
+
+                    <div class="dns-flow">
+
+                        <div class="dns-step">
+
+                            <span>1</span>
+
+                            <strong>
+                                User
+                            </strong>
+
+                            <p>
+                                Types a domain
+                            </p>
+
+                        </div>
+
+
+                        <div class="dns-arrow">
+                            →
+                        </div>
+
+
+                        <div class="dns-step">
+
+                            <span>2</span>
+
+                            <strong>
+                                DNS
+                            </strong>
+
+                            <p>
+                                Finds the destination
+                            </p>
+
+                        </div>
+
+
+                        <div class="dns-arrow">
+                            →
+                        </div>
+
+
+                        <div class="dns-step">
+
+                            <span>3</span>
+
+                            <strong>
+                                Server
+                            </strong>
+
+                            <p>
+                                Returns website content
+                            </p>
+
+                        </div>
+
+
+                        <div class="dns-arrow">
+                            →
+                        </div>
+
+
+                        <div class="dns-step">
+
+                            <span>4</span>
+
+                            <strong>
+                                Website
+                            </strong>
+
+                            <p>
+                                Appears in browser
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <strong>
+                            💡 Simple way to remember
+                        </strong>
+
+                        <p>
+                            <strong>Domain = Address</strong><br>
+                            <strong>Hosting = Place</strong><br>
+                            <strong>DNS = Direction system</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PART 6
+             SSL
+        ========================== -->
+
+        <section class="lesson-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        04 · SECURITY
+                    </span>
+
+                    <h2>
+                        HTTP vs HTTPS
+                    </h2>
+
+                </div>
+
+
+                <div class="comparison-card security-comparison">
+
+                    <div>
+
+                        <span class="security-status http">
+                            HTTP
+                        </span>
+
+                        <h3>
+                            http://example.com
+                        </h3>
+
+                        <p>
+                            Data is not protected by
+                            HTTPS encryption.
+                        </p>
+
+                    </div>
+
+
+                    <div class="comparison-divider">
+                        VS
+                    </div>
+
+
+                    <div>
+
+                        <span class="security-status https">
+                            HTTPS
+                        </span>
+
+                        <h3>
+                            https://example.com
+                        </h3>
+
+                        <p>
+                            Uses TLS encryption to help protect
+                            data transferred between the browser
+                            and website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-box success-box">
+
+                    <strong>
+                        🔒 SSL / TLS
+                    </strong>
+
+                    <p>
+                        SSL is the older name commonly used when
+                        discussing website certificates. Modern
+                        secure web connections use TLS.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SECURITY CHECKLIST
+        ========================== -->
+
+        <section class="lesson-section lesson-light">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        SECURITY CHECKLIST
+                    </span>
+
+                    <h2>
+                        Basic Website Security
+                    </h2>
+
+                    <p>
+                        A website needs more than HTTPS.
+                        Good security also involves account,
+                        software and backup practices.
+                    </p>
+
+                </div>
+
+
+                <div class="security-grid">
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Use strong passwords
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Enable two-factor authentication
+                            where available
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Keep CMS, plugins and themes updated
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Maintain regular backups
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Use appropriate user roles
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Monitor suspicious login attempts
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Review suspicious plugins or themes
+                        </span>
+
+                    </label>
+
+
+                    <label class="security-item">
+
+                        <input type="checkbox">
+
+                        <span>
+                            Make sure HTTPS is enabled
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PRACTICAL
+        ========================== -->
+
+        <section class="lesson-section practical-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        05 · DO
+                    </span>
+
+                    <h2>
+                        Student Practical
+                    </h2>
+
+                    <p>
+                        Apply what you learned by researching
+                        real domain names and evaluating website security.
+                    </p>
+
+                </div>
+
+
+                <div class="practical-card">
+
+                    <div class="practical-number">
+                        PRACTICAL 01
+                    </div>
+
+
+                    <h3>
+                        Domain Selection Activity
+                    </h3>
+
+
+                    <p>
+                        Imagine that you are creating a website
+                        for a new business.
+                    </p>
+
+
+                    <h4>
+                        Your task:
+                    </h4>
+
+
+                    <ol>
+
+                        <li>
+                            Choose a fictional business.
+                        </li>
+
+                        <li>
+                            Create 3 possible domain names.
+                        </li>
+
+                        <li>
+                            Check whether the domains are available
+                            using a domain registrar.
+                        </li>
+
+                        <li>
+                            Compare the domain extensions.
+                        </li>
+
+                        <li>
+                            Select your preferred domain.
+                        </li>
+
+                        <li>
+                            Write 2–3 reasons for your choice.
+                        </li>
+
+                    </ol>
+
+
+                    <div class="deliverable-box">
+
+                        <strong>
+                            📄 Deliverable
+                        </strong>
+
+                        <p>
+                            Submit a simple table containing:
+                            Business Name, Domain Option,
+                            Extension, Availability and Reason.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="practical-card">
+
+                    <div class="practical-number">
+                        PRACTICAL 02
+                    </div>
+
+
+                    <h3>
+                        Website Security Checklist
+                    </h3>
+
+
+                    <p>
+                        Choose a website and review its publicly
+                        visible security indicators.
+                    </p>
+
+
+                    <h4>
+                        Check:
+                    </h4>
+
+
+                    <ul class="check-list">
+
+                        <li>
+                            ✓ Does it use HTTPS?
+                        </li>
+
+                        <li>
+                            ✓ Does the browser show a secure connection?
+                        </li>
+
+                        <li>
+                            ✓ Does the website redirect from HTTP to HTTPS?
+                        </li>
+
+                        <li>
+                            ✓ Does the website appear to use updated software?
+                            <small>
+                                (where publicly observable)
+                            </small>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="warning-box">
+
+                        <strong>
+                            ⚠️ Important
+                        </strong>
+
+                        <p>
+                            Students should only observe publicly
+                            available information. Do not attempt
+                            to test, scan or attack websites without
+                            explicit permission.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ASSIGNMENT
+        ========================== -->
+
+        <section class="lesson-section lesson-light">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        06 · SUBMIT
+                    </span>
+
+                    <h2>
+                        Module Assignment
+                    </h2>
+
+                </div>
+
+
+                <div class="assignment-card">
+
+                    <div class="assignment-icon">
+                        📝
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Plan the Technical Foundation
+                            of a Website
+                        </h3>
+
+
+                        <p>
+                            Select a business and prepare a basic
+                            technical setup plan for its website.
+                        </p>
+
+
+                        <h4>
+                            Include:
+                        </h4>
+
+
+                        <ul>
+
+                            <li>
+                                Business name
+                            </li>
+
+                            <li>
+                                3 possible domain names
+                            </li>
+
+                            <li>
+                                Preferred domain + reason
+                            </li>
+
+                            <li>
+                                Suitable hosting type + reason
+                            </li>
+
+                            <li>
+                                Basic HTTPS/security checklist
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             QUICK QUIZ
+        ========================== -->
+
+        <section class="lesson-section quiz-section">
+
+            <div class="container">
+
+                <div class="lesson-heading">
+
+                    <span class="section-label">
+                        QUICK QUIZ
+                    </span>
+
+                    <h2>
+                        Check Your Understanding
+                    </h2>
+
+                </div>
+
+
+                <div class="quiz-card">
+
+                    <div class="quiz-question">
+
+                        <p>
+                            <strong>
+                                1.
+                            </strong>
+
+                            What is the main purpose of a domain name?
+                        </p>
+
+                        <label>
+                            <input type="radio"
+                                name="q1">
+                            To store website files
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q1">
+                            To provide a human-readable website address
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q1">
+                            To create a database
+                        </label>
+
+                    </div>
+
+
+                    <div class="quiz-question">
+
+                        <p>
+                            <strong>
+                                2.
+                            </strong>
+
+                            What does DNS help do?
+                        </p>
+
+                        <label>
+                            <input type="radio"
+                                name="q2">
+                            Design a website
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q2">
+                            Direct domain requests to the appropriate destination
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q2">
+                            Write website content
+                        </label>
+
+                    </div>
+
+
+                    <div class="quiz-question">
+
+                        <p>
+                            <strong>
+                                3.
+                            </strong>
+
+                            Which protocol indicates a secure web connection?
+                        </p>
+
+                        <label>
+                            <input type="radio"
+                                name="q3">
+                            FTP
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q3">
+                            HTTP
+                        </label>
+
+                        <label>
+                            <input type="radio"
+                                name="q3">
+                            HTTPS
+                        </label>
+
+                    </div>
+
+
+                    <button class="quiz-button"
+                        id="quizButton">
+
+                        Check Answers
+
+                    </button>
+
+
+                    <div id="quizResult"
+                        class="quiz-result">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MODULE COMPLETE
+        ========================== -->
+
+        <section class="module-complete">
+
+            <div class="container">
+
+                <div class="complete-box">
+
+                    <span>
+                        MODULE 01
+                    </span>
+
+                    <h2>
+                        Ready for Module 2?
+                    </h2>
+
+                    <p>
+                        Next, learn how CMS platforms work
+                        and how WordPress, Shopify, WooCommerce
+                        and custom development differ.
+                    </p>
+
+
+                    <div class="complete-buttons">
+
+                        <a href="modules.html"
+                            class="secondary-btn">
+
+                            ← All Modules
+
+                        </a>
+
+
+                        <a href="module-2.html"
+                            class="primary-btn">
+
+                            Module 2 →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <div class="footer-logo">
+                    WEB & E-COMMERCE
+                </div>
+
+                <p>
+                    Practical Web Skills for Digital Marketing Students
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="modules.html">
+                    Modules
+                </a>
+
+                <a href="index.html#capstone">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Web & E-Commerce Lab
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="myscript.js"></script>
+
+
+    <!-- =========================
+         MODULE 1 QUIZ SCRIPT
+    ========================== -->
+
+    <script>
+
+        const quizButton =
+            document.getElementById("quizButton");
+
+        const quizResult =
+            document.getElementById("quizResult");
+
+
+        if (quizButton) {
+
+            quizButton.addEventListener("click", function () {
+
+                let score = 0;
+
+
+                const q1 =
+                    document.querySelector(
+                        'input[name="q1"]:checked'
+                    );
+
+                const q2 =
+                    document.querySelector(
+                        'input[name="q2"]:checked'
+                    );
+
+                const q3 =
+                    document.querySelector(
+                        'input[name="q3"]:checked'
+                    );
+
+
+                if (
+                    q1 &&
+                    q1.parentElement.textContent
+                        .includes("human-readable")
+                ) {
+                    score++;
+                }
+
+
+                if (
+                    q2 &&
+                    q2.parentElement.textContent
+                        .includes("Direct domain")
+                ) {
+                    score++;
+                }
+
+
+                if (
+                    q3 &&
+                    q3.parentElement.textContent
+                        .includes("HTTPS")
+                ) {
+                    score++;
+                }
+
+
+                quizResult.style.display = "block";
+
+
+                if (score === 3) {
+
+                    quizResult.innerHTML =
+                        "🎉 Excellent! You got 3/3 correct.";
+
+                }
+
+                else if (score === 2) {
+
+                    quizResult.innerHTML =
+                        "👍 Good job! You got 2/3 correct. Review the module once more.";
+
+                }
+
+                else {
+
+                    quizResult.innerHTML =
+                        "📚 You got " +
+                        score +
+                        "/3. Review the lesson and try again.";
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
