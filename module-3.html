@@ -1,0 +1,2656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+                    BASIC META
+    =========================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Module 3 | Website Structure Planning | Web & E-Commerce Lab</title>
+
+    <meta name="description"
+        content="Module 3 teaches Digital Marketing students how to plan website structure, pages, navigation, categories, user journeys and sitemaps.">
+
+    <meta name="keywords"
+        content="website structure planning, sitemap, navigation, website pages, user journey, digital marketing">
+
+    <!-- ==========================================
+                    GOOGLE FONTS
+    =========================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ==========================================
+                    ICONS
+    =========================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- ==========================================
+                    MAIN CSS
+    =========================================== -->
+
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- ==========================================
+                    MODULE 3 CSS
+    =========================================== -->
+
+    <style>
+
+        /* ==========================================
+                MODULE HERO
+        =========================================== */
+
+        .module-hero {
+            padding: 100px 20px 80px;
+            background: linear-gradient(135deg, #f5fbff, #ffffff);
+            border-bottom: 1px solid #e8f2f7;
+        }
+
+        .module-hero-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #0099cc;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .module-hero-number {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #e7f7fd;
+            color: #007fae;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .module-hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 6vw, 64px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #123044;
+        }
+
+        .module-hero h1 span {
+            color: #0099cc;
+        }
+
+        .module-hero p {
+            max-width: 750px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #61717c;
+            margin-bottom: 30px;
+        }
+
+        .module-flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .module-flow span {
+            background: #ffffff;
+            border: 1px solid #dcecf3;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #29424f;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .module-flow i {
+            color: #0099cc;
+        }
+
+
+        /* ==========================================
+                GENERAL LESSON SECTION
+        =========================================== */
+
+        .lesson-section {
+            padding: 80px 20px;
+        }
+
+        .lesson-light {
+            background: #f8fcfe;
+        }
+
+        .lesson-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .lesson-heading {
+            margin-bottom: 40px;
+        }
+
+        .lesson-heading small {
+            display: block;
+            color: #0099cc;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .lesson-heading h2 {
+            font-family: "Playfair Display", serif;
+            color: #123044;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .lesson-heading p {
+            max-width: 750px;
+            color: #657680;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+
+        /* ==========================================
+                CONCEPT BOX
+        =========================================== */
+
+        .concept-box {
+            background: #ffffff;
+            border: 1px solid #dfeef4;
+            border-left: 4px solid #0099cc;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .concept-box h3 {
+            margin-top: 0;
+            color: #17394b;
+            font-size: 21px;
+        }
+
+        .concept-box p {
+            color: #657680;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+                OBJECTIVES
+        =========================================== */
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 18px;
+        }
+
+        .objective-card {
+            background: #ffffff;
+            border: 1px solid #e2edf2;
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .objective-card i {
+            font-size: 25px;
+            color: #0099cc;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .objective-card h3 {
+            font-size: 17px;
+            color: #183a4b;
+            margin-bottom: 8px;
+        }
+
+        .objective-card p {
+            font-size: 14px;
+            color: #6a7981;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+
+        /* ==========================================
+                GOAL CARDS
+        =========================================== */
+
+        .goal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .goal-card {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .goal-card h3 {
+            color: #17394b;
+            margin-top: 0;
+        }
+
+        .goal-card p {
+            color: #657680;
+            line-height: 1.8;
+        }
+
+        .goal-card ul {
+            padding-left: 20px;
+            color: #657680;
+            line-height: 1.9;
+        }
+
+
+        /* ==========================================
+                PAGE PLANNING
+        =========================================== */
+
+        .page-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .page-card {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .page-card .page-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #eaf8fd;
+            color: #0099cc;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .page-card h3 {
+            margin: 0 0 8px;
+            color: #17394b;
+            font-size: 18px;
+        }
+
+        .page-card p {
+            margin: 0;
+            color: #687881;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* ==========================================
+                HEADER FOOTER CTA
+        =========================================== */
+
+        .structure-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .structure-card {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .structure-card h3 {
+            color: #17394b;
+            margin-top: 0;
+        }
+
+        .structure-card p {
+            color: #687881;
+            line-height: 1.7;
+        }
+
+        .cta-example {
+            margin-top: 15px;
+            padding: 12px 16px;
+            background: #f4fbfe;
+            border-radius: 8px;
+            color: #007fae;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+
+        /* ==========================================
+                NAVIGATION
+        =========================================== */
+
+        .nav-example {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            padding: 20px;
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .nav-item {
+            padding: 10px 15px;
+            border-radius: 7px;
+            background: #eef9fd;
+            color: #17617a;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .nav-arrow {
+            color: #a1b5bf;
+        }
+
+
+        /* ==========================================
+                CATEGORY TREE
+        =========================================== */
+
+        .category-box {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 25px;
+        }
+
+        .category-tree {
+            border-left: 2px solid #b9dce9;
+            padding-left: 25px;
+        }
+
+        .category-level {
+            position: relative;
+            margin: 15px 0;
+            padding: 12px 16px;
+            background: #f7fcfe;
+            border-radius: 8px;
+            color: #244655;
+            font-weight: 600;
+        }
+
+        .category-level::before {
+            content: "";
+            position: absolute;
+            left: -27px;
+            top: 50%;
+            width: 24px;
+            height: 2px;
+            background: #b9dce9;
+        }
+
+        .category-level.child {
+            margin-left: 30px;
+        }
+
+
+        /* ==========================================
+                USER JOURNEY
+        =========================================== */
+
+        .journey-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 35px;
+        }
+
+        .journey-step {
+            padding: 16px 20px;
+            background: #ffffff;
+            border: 1px solid #dcecf3;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 130px;
+        }
+
+        .journey-step strong {
+            display: block;
+            color: #183b4d;
+            margin-bottom: 5px;
+        }
+
+        .journey-step small {
+            color: #71828b;
+        }
+
+        .journey-arrow {
+            color: #0099cc;
+            font-size: 20px;
+        }
+
+        .conversion-box {
+            margin-top: 30px;
+            padding: 22px;
+            background: #eaf8fd;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .conversion-box strong {
+            color: #007fae;
+        }
+
+
+        /* ==========================================
+                SITEMAP
+        =========================================== */
+
+        .sitemap-wrapper {
+            background: #ffffff;
+            border: 1px solid #dfeef4;
+            border-radius: 14px;
+            padding: 35px;
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+
+        .sitemap-tree {
+            min-width: 650px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .sitemap-root {
+            width: fit-content;
+            margin: auto;
+            padding: 13px 24px;
+            background: #0099cc;
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .sitemap-line {
+            width: 2px;
+            height: 30px;
+            background: #b7dbe7;
+            margin: auto;
+        }
+
+        .sitemap-main {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            margin-top: 0;
+        }
+
+        .sitemap-main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 5%;
+            right: 5%;
+            height: 2px;
+            background: #b7dbe7;
+        }
+
+        .sitemap-column {
+            position: relative;
+            padding-top: 25px;
+            min-width: 115px;
+        }
+
+        .sitemap-column::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 25px;
+            background: #b7dbe7;
+        }
+
+        .sitemap-node {
+            padding: 12px 15px;
+            background: #f0f9fc;
+            border: 1px solid #d6eaf1;
+            border-radius: 7px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #244655;
+        }
+
+        .sitemap-child {
+            margin-top: 10px;
+            padding: 9px 10px;
+            background: #ffffff;
+            border: 1px dashed #c7dfe7;
+            border-radius: 6px;
+            font-size: 12px;
+            text-align: center;
+            color: #687881;
+        }
+
+
+        /* ==========================================
+                BOUTIQUE EXAMPLE
+        =========================================== */
+
+        .example-label {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #fff5e8;
+            color: #9a651b;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .example-card {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 14px;
+            padding: 30px;
+        }
+
+        .example-card h3 {
+            color: #17394b;
+            margin-top: 0;
+        }
+
+        .example-card p {
+            color: #687881;
+            line-height: 1.8;
+        }
+
+
+        /* ==========================================
+                PRACTICAL
+        =========================================== */
+
+        .practical-section {
+            background: #eef9fd;
+            border-top: 1px solid #dceff5;
+            border-bottom: 1px solid #dceff5;
+        }
+
+        .practical-card {
+            background: #ffffff;
+            border: 1px solid #d9eaf0;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+
+        .practical-number {
+            display: inline-block;
+            padding: 6px 11px;
+            background: #e5f7fc;
+            color: #007fae;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .practical-card h3 {
+            color: #17394b;
+            margin: 0 0 12px;
+        }
+
+        .practical-card p {
+            color: #687881;
+            line-height: 1.8;
+        }
+
+        .practical-card ul {
+            color: #657680;
+            line-height: 1.9;
+            padding-left: 20px;
+        }
+
+        .deliverable-box {
+            background: #f7fcfe;
+            border-left: 3px solid #0099cc;
+            padding: 15px 18px;
+            margin-top: 18px;
+            border-radius: 6px;
+        }
+
+        .deliverable-box strong {
+            color: #173f50;
+        }
+
+
+        /* ==========================================
+                PRACTICAL FLOW
+        =========================================== */
+
+        .practical-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 35px 0;
+        }
+
+        .practical-flow-item {
+            padding: 12px 16px;
+            background: #ffffff;
+            border: 1px solid #d8eaf0;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #294655;
+        }
+
+        .practical-flow i {
+            color: #0099cc;
+        }
+
+
+        /* ==========================================
+                ASSIGNMENT
+        =========================================== */
+
+        .assignment-card {
+            background: #ffffff;
+            border: 2px solid #bfe6f1;
+            border-radius: 16px;
+            padding: 35px;
+        }
+
+        .assignment-card h3 {
+            color: #17394b;
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        .assignment-card p {
+            color: #657680;
+            line-height: 1.8;
+        }
+
+        .assignment-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .assignment-item {
+            padding: 15px;
+            background: #f7fcfe;
+            border-radius: 8px;
+            color: #45606d;
+            font-size: 14px;
+        }
+
+        .assignment-item i {
+            color: #0099cc;
+            margin-right: 8px;
+        }
+
+
+        /* ==========================================
+                QUIZ
+        =========================================== */
+
+        .quiz-card {
+            background: #ffffff;
+            border: 1px solid #dfedf3;
+            border-radius: 14px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-question {
+            color: #17394b;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .quiz-option {
+            display: block;
+            padding: 12px 15px;
+            border: 1px solid #dcebf0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            color: #526a75;
+            transition: 0.2s ease;
+        }
+
+        .quiz-option:hover {
+            background: #f4fbfd;
+            border-color: #9ed8e8;
+        }
+
+        .quiz-option input {
+            margin-right: 8px;
+        }
+
+        .quiz-result {
+            margin-top: 15px;
+            font-weight: 600;
+            display: none;
+        }
+
+
+        /* ==========================================
+                MODULE COMPLETE
+        =========================================== */
+
+        .module-complete {
+            text-align: center;
+            background: linear-gradient(135deg, #f1fbfe, #ffffff);
+        }
+
+        .complete-icon {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            background: #e2f7fc;
+            color: #0099cc;
+            border-radius: 50%;
+            font-size: 30px;
+        }
+
+        .module-complete h2 {
+            font-family: "Playfair Display", serif;
+            color: #17394b;
+            font-size: 36px;
+        }
+
+        .module-complete p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #687881;
+            line-height: 1.8;
+        }
+
+        .module-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .module-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #d4e8ef;
+            color: #31515e;
+            background: #ffffff;
+        }
+
+        .module-btn.primary {
+            background: #0099cc;
+            color: #ffffff;
+            border-color: #0099cc;
+        }
+
+
+        /* ==========================================
+                RESPONSIVE
+        =========================================== */
+
+        @media (max-width: 1000px) {
+
+            .objective-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .page-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .structure-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .module-hero {
+                padding: 70px 20px 60px;
+            }
+
+            .lesson-section {
+                padding: 60px 20px;
+            }
+
+            .objective-grid,
+            .goal-grid,
+            .page-list,
+            .assignment-list {
+                grid-template-columns: 1fr;
+            }
+
+            .module-flow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .module-flow i {
+                transform: rotate(90deg);
+            }
+
+            .journey-flow {
+                flex-direction: column;
+            }
+
+            .journey-arrow {
+                transform: rotate(90deg);
+            }
+
+            .sitemap-wrapper {
+                padding: 20px;
+            }
+
+            .sitemap-main {
+                justify-content: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+                    HEADER
+    =========================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="nav-container">
+
+                <a href="index.html" class="logo">
+                    WEB & E-COMMERCE
+                    <span>Learning Lab</span>
+                </a>
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open navigation menu">
+
+                    <i class="bi bi-list"></i>
+
+                </button>
+
+
+                <ul class="nav-menu" id="navMenu">
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="modules.html" class="active">Modules</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#how-it-works">How It Works</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#capstone">Capstone</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#resources">Resources</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+                    MODULE HERO
+    =========================================== -->
+
+    <section class="module-hero">
+
+        <div class="module-hero-container">
+
+            <a href="modules.html" class="back-link">
+                <i class="bi bi-arrow-left"></i>
+                Back to Modules
+            </a>
+
+            <div class="module-hero-number">
+                MODULE 03
+            </div>
+
+            <h1>
+                Website
+                <span>Structure Planning</span>
+            </h1>
+
+            <p>
+                Learn how to turn a business goal into a clear website
+                structure — including pages, navigation, categories,
+                user journeys and a sitemap.
+            </p>
+
+
+            <div class="module-flow">
+
+                <span>Business Goal</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <span>Pages</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <span>Navigation</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <span>Categories</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <span>User Journey</span>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <span>Sitemap</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    LEARNING OBJECTIVES
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>01 — Learning Objectives</small>
+
+                <h2>What You Will Learn</h2>
+
+                <p>
+                    By the end of this module, you should be able to
+                    plan a website structure before building or managing
+                    the actual website.
+                </p>
+
+            </div>
+
+
+            <div class="objective-grid">
+
+
+                <div class="objective-card">
+
+                    <i class="bi bi-bullseye"></i>
+
+                    <h3>Business Goal</h3>
+
+                    <p>
+                        Identify what the website needs to achieve.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-card">
+
+                    <i class="bi bi-file-earmark-text"></i>
+
+                    <h3>Pages</h3>
+
+                    <p>
+                        Decide which pages the website needs.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-card">
+
+                    <i class="bi bi-menu-button-wide"></i>
+
+                    <h3>Navigation</h3>
+
+                    <p>
+                        Organize pages so visitors can move easily.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-card">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h3>Categories</h3>
+
+                    <p>
+                        Organize products or content into logical groups.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-card">
+
+                    <i class="bi bi-signpost-split"></i>
+
+                    <h3>User Journey</h3>
+
+                    <p>
+                        Plan the path from visitor to desired action.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                WHAT IS WEBSITE STRUCTURE?
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>02 — Concept</small>
+
+                <h2>What Is Website Structure?</h2>
+
+                <p>
+                    Website structure is the way the pages, content,
+                    categories and navigation of a website are organized.
+                </p>
+
+            </div>
+
+
+            <div class="concept-box">
+
+                <h3>
+                    Think of a website like a building.
+                </h3>
+
+                <p>
+                    Before constructing a building, we need a plan.
+                    We decide where the entrance, rooms, corridors
+                    and other areas should be located.
+                </p>
+
+                <p>
+                    A website works in a similar way.
+                    Before creating pages, we decide what pages are
+                    required, how they are connected and how visitors
+                    will move between them.
+                </p>
+
+            </div>
+
+
+            <div class="concept-box">
+
+                <h3>
+                    A basic website structure
+                </h3>
+
+                <p>
+                    <strong>
+                        Business Goal → Pages → Navigation →
+                        Categories → User Journey → Sitemap
+                    </strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                BUSINESS GOAL
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>03 — Planning</small>
+
+                <h2>Business Goal & Target Audience</h2>
+
+                <p>
+                    The website structure should begin with the business
+                    goal and the people who will use the website.
+                </p>
+
+            </div>
+
+
+            <div class="goal-grid">
+
+
+                <div class="goal-card">
+
+                    <h3>
+                        <i class="bi bi-bullseye"></i>
+                        Business Goal
+                    </h3>
+
+                    <p>
+                        Ask: What should the website help the business
+                        achieve?
+                    </p>
+
+                    <ul>
+                        <li>Generate enquiries</li>
+                        <li>Sell products</li>
+                        <li>Get bookings</li>
+                        <li>Build brand awareness</li>
+                        <li>Provide information</li>
+                        <li>Generate leads</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="goal-card">
+
+                    <h3>
+                        <i class="bi bi-people"></i>
+                        Target Audience
+                    </h3>
+
+                    <p>
+                        Ask: Who is the website being created for?
+                    </p>
+
+                    <ul>
+                        <li>Age group</li>
+                        <li>Location</li>
+                        <li>Needs</li>
+                        <li>Problems</li>
+                        <li>Buying behaviour</li>
+                        <li>Information they are looking for</li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="concept-box" style="margin-top:25px;">
+
+                <h3>Example</h3>
+
+                <p>
+                    <strong>Business:</strong> Local Fashion Boutique
+                </p>
+
+                <p>
+                    <strong>Goal:</strong>
+                    Showcase products and generate online enquiries.
+                </p>
+
+                <p>
+                    <strong>Audience:</strong>
+                    Women looking for sarees, kurtis and accessories.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    WEBSITE PAGES
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>04 — Pages</small>
+
+                <h2>Planning Website Pages</h2>
+
+                <p>
+                    Every website does not need the same pages.
+                    Choose pages according to the business goal and
+                    visitor requirements.
+                </p>
+
+            </div>
+
+
+            <div class="page-list">
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-house"></i>
+                    </div>
+
+                    <h3>Home</h3>
+
+                    <p>
+                        Introduces the business and guides visitors
+                        to important sections.
+                    </p>
+
+                </div>
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-person"></i>
+                    </div>
+
+                    <h3>About</h3>
+
+                    <p>
+                        Explains the business, brand, people or story.
+                    </p>
+
+                </div>
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-grid"></i>
+                    </div>
+
+                    <h3>Products / Services</h3>
+
+                    <p>
+                        Shows the products or services offered.
+                    </p>
+
+                </div>
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-journal-text"></i>
+                    </div>
+
+                    <h3>Blog</h3>
+
+                    <p>
+                        Provides useful content and supports content
+                        marketing and SEO.
+                    </p>
+
+                </div>
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+
+                    <h3>Contact</h3>
+
+                    <p>
+                        Gives visitors a way to contact the business.
+                    </p>
+
+                </div>
+
+
+                <div class="page-card">
+
+                    <div class="page-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h3>Privacy Policy</h3>
+
+                    <p>
+                        Provides important information about privacy
+                        and data handling.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                HEADER FOOTER CTA
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>05 — Website Components</small>
+
+                <h2>Header, Footer & CTA</h2>
+
+                <p>
+                    Important website elements should help visitors
+                    understand where they are and what they can do next.
+                </p>
+
+            </div>
+
+
+            <div class="structure-grid">
+
+
+                <div class="structure-card">
+
+                    <h3>
+                        <i class="bi bi-layout-text-window"></i>
+                        Header
+                    </h3>
+
+                    <p>
+                        Usually contains the logo, main navigation,
+                        important links and sometimes a primary CTA.
+                    </p>
+
+                    <div class="cta-example">
+                        Logo → Home → About → Products → Contact
+                    </div>
+
+                </div>
+
+
+                <div class="structure-card">
+
+                    <h3>
+                        <i class="bi bi-layout-text-sidebar"></i>
+                        Footer
+                    </h3>
+
+                    <p>
+                        Provides supporting links, contact details,
+                        social links and legal pages.
+                    </p>
+
+                    <div class="cta-example">
+                        Contact → Social → Privacy → Copyright
+                    </div>
+
+                </div>
+
+
+                <div class="structure-card">
+
+                    <h3>
+                        <i class="bi bi-cursor"></i>
+                        CTA
+                    </h3>
+
+                    <p>
+                        A Call To Action tells the visitor what action
+                        they can take next.
+                    </p>
+
+                    <div class="cta-example">
+                        Shop Now · Book Now · Contact Us · Enquire
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    NAVIGATION
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>06 — Navigation</small>
+
+                <h2>Planning Website Navigation</h2>
+
+                <p>
+                    Navigation helps users move from one page or section
+                    to another without getting confused.
+                </p>
+
+            </div>
+
+
+            <div class="concept-box">
+
+                <h3>Good navigation should be:</h3>
+
+                <ul>
+                    <li>Simple</li>
+                    <li>Consistent</li>
+                    <li>Easy to understand</li>
+                    <li>Relevant to the website goal</li>
+                    <li>Easy to use on mobile devices</li>
+                </ul>
+
+            </div>
+
+
+            <div class="nav-example">
+
+                <div class="nav-item">Home</div>
+
+                <div class="nav-arrow">→</div>
+
+                <div class="nav-item">About</div>
+
+                <div class="nav-arrow">→</div>
+
+                <div class="nav-item">Products</div>
+
+                <div class="nav-arrow">→</div>
+
+                <div class="nav-item">Blog</div>
+
+                <div class="nav-arrow">→</div>
+
+                <div class="nav-item">Contact</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                CATEGORIES
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>07 — Categories</small>
+
+                <h2>Categories & Subcategories</h2>
+
+                <p>
+                    Categories help organize products, services or
+                    content into meaningful groups.
+                </p>
+
+            </div>
+
+
+            <div class="category-box">
+
+                <h3>Example — Fashion Boutique</h3>
+
+                <div class="category-tree">
+
+                    <div class="category-level">
+                        Products
+                    </div>
+
+                    <div class="category-level child">
+                        Sarees
+                    </div>
+
+                    <div class="category-level child">
+                        Kurtis
+                    </div>
+
+                    <div class="category-level child">
+                        Accessories
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="concept-box" style="margin-top:25px;">
+
+                <h3>Why categories matter</h3>
+
+                <p>
+                    A well-organized category structure helps visitors
+                    find products or information quickly. It also gives
+                    the website a clearer content structure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    USER JOURNEY
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>08 — User Journey</small>
+
+                <h2>Planning the User Journey</h2>
+
+                <p>
+                    A user journey describes the path a visitor takes
+                    from entering the website to completing the desired
+                    action.
+                </p>
+
+            </div>
+
+
+            <div class="journey-flow">
+
+                <div class="journey-step">
+
+                    <strong>Home</strong>
+
+                    <small>First impression</small>
+
+                </div>
+
+
+                <div class="journey-arrow">
+                    →
+                </div>
+
+
+                <div class="journey-step">
+
+                    <strong>Products</strong>
+
+                    <small>Explore</small>
+
+                </div>
+
+
+                <div class="journey-arrow">
+                    →
+                </div>
+
+
+                <div class="journey-step">
+
+                    <strong>Sarees</strong>
+
+                    <small>Category</small>
+
+                </div>
+
+
+                <div class="journey-arrow">
+                    →
+                </div>
+
+
+                <div class="journey-step">
+
+                    <strong>Product</strong>
+
+                    <small>Details</small>
+
+                </div>
+
+
+                <div class="journey-arrow">
+                    →
+                </div>
+
+
+                <div class="journey-step">
+
+                    <strong>Enquire / Buy</strong>
+
+                    <small>Action</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="conversion-box">
+
+                <strong>
+                    Goal:
+                </strong>
+
+                Move the visitor from discovering the website
+                to taking the desired business action.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    SITEMAP
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>09 — Sitemap</small>
+
+                <h2>What Is a Sitemap?</h2>
+
+                <p>
+                    A sitemap is a visual or structured representation
+                    of the pages and hierarchy of a website.
+                </p>
+
+            </div>
+
+
+            <div class="concept-box">
+
+                <h3>Important distinction</h3>
+
+                <p>
+                    In this module, students first learn the concept of
+                    a <strong>website structure sitemap</strong> —
+                    a planning document showing pages and relationships.
+                </p>
+
+                <p>
+                    Later, in the SEO module, you will learn about the
+                    <strong>XML sitemap</strong> used by search engines.
+                </p>
+
+            </div>
+
+
+            <div class="sitemap-wrapper">
+
+                <div class="sitemap-tree">
+
+                    <div class="sitemap-root">
+                        Home
+                    </div>
+
+                    <div class="sitemap-line"></div>
+
+
+                    <div class="sitemap-main">
+
+
+                        <div class="sitemap-column">
+
+                            <div class="sitemap-node">
+                                About
+                            </div>
+
+                        </div>
+
+
+                        <div class="sitemap-column">
+
+                            <div class="sitemap-node">
+                                Products
+                            </div>
+
+                            <div class="sitemap-child">
+                                Sarees
+                            </div>
+
+                            <div class="sitemap-child">
+                                Kurtis
+                            </div>
+
+                            <div class="sitemap-child">
+                                Accessories
+                            </div>
+
+                        </div>
+
+
+                        <div class="sitemap-column">
+
+                            <div class="sitemap-node">
+                                Blog
+                            </div>
+
+                        </div>
+
+
+                        <div class="sitemap-column">
+
+                            <div class="sitemap-node">
+                                Contact
+                            </div>
+
+                        </div>
+
+
+                        <div class="sitemap-column">
+
+                            <div class="sitemap-node">
+                                Privacy
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                BOUTIQUE EXAMPLE
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>10 — Real Example</small>
+
+                <h2>Example: Boutique Website</h2>
+
+                <p>
+                    Let's combine everything we learned into one
+                    practical example.
+                </p>
+
+            </div>
+
+
+            <div class="example-card">
+
+                <div class="example-label">
+                    BUSINESS EXAMPLE
+                </div>
+
+                <h3>
+                    Fashion Boutique
+                </h3>
+
+                <p>
+                    <strong>Business Goal:</strong>
+                    Showcase products and generate enquiries or sales.
+                </p>
+
+                <p>
+                    <strong>Target Audience:</strong>
+                    Customers interested in fashion products such as
+                    sarees, kurtis and accessories.
+                </p>
+
+                <p>
+                    <strong>Pages:</strong>
+                    Home, About, Products, Blog, Contact, Privacy Policy.
+                </p>
+
+                <p>
+                    <strong>Categories:</strong>
+                    Sarees, Kurtis, Accessories.
+                </p>
+
+                <p>
+                    <strong>User Journey:</strong>
+                    Home → Products → Sarees → Product → Enquire / Buy.
+                </p>
+
+                <p>
+                    <strong>Sitemap:</strong>
+                </p>
+
+                <div class="category-box">
+
+                    <div class="category-tree">
+
+                        <div class="category-level">
+                            Home
+                        </div>
+
+                        <div class="category-level child">
+                            About
+                        </div>
+
+                        <div class="category-level child">
+                            Products
+                        </div>
+
+                        <div class="category-level child">
+                            ├── Sarees
+                        </div>
+
+                        <div class="category-level child">
+                            ├── Kurtis
+                        </div>
+
+                        <div class="category-level child">
+                            └── Accessories
+                        </div>
+
+                        <div class="category-level child">
+                            Blog
+                        </div>
+
+                        <div class="category-level child">
+                            Contact
+                        </div>
+
+                        <div class="category-level child">
+                            Privacy Policy
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    PRACTICAL
+    =========================================== -->
+
+    <section class="lesson-section practical-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>11 — Student Practical</small>
+
+                <h2>Plan Your Own Website Structure</h2>
+
+                <p>
+                    Use the same business/project you worked with in
+                    Modules 1 and 2. Do not start a completely different
+                    project unless your trainer asks you to.
+                </p>
+
+            </div>
+
+
+            <div class="practical-flow">
+
+                <div class="practical-flow-item">
+                    Business Goal
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    Target Audience
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    Pages
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    Navigation
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    Categories
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    User Journey
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+
+                <div class="practical-flow-item">
+                    Sitemap
+                </div>
+
+            </div>
+
+
+            <!-- PRACTICAL 01 -->
+
+            <div class="practical-card">
+
+                <span class="practical-number">
+                    PRACTICAL 01
+                </span>
+
+                <h3>
+                    Define the Business Goal & Target Audience
+                </h3>
+
+                <p>
+                    Start with the business/project you are already
+                    working on.
+                </p>
+
+                <ul>
+                    <li>Write the business name.</li>
+                    <li>Identify the main business goal.</li>
+                    <li>Define the target audience.</li>
+                    <li>Write what the visitor should do on the website.</li>
+                </ul>
+
+                <div class="deliverable-box">
+
+                    <strong>Deliverable:</strong>
+
+                    One-page Business Goal & Target Audience note.
+
+                </div>
+
+            </div>
+
+
+            <!-- PRACTICAL 02 -->
+
+            <div class="practical-card">
+
+                <span class="practical-number">
+                    PRACTICAL 02
+                </span>
+
+                <h3>
+                    List Website Pages & Navigation
+                </h3>
+
+                <p>
+                    Decide which pages your website needs.
+                </p>
+
+                <ul>
+                    <li>List the required pages.</li>
+                    <li>Choose which pages appear in the main navigation.</li>
+                    <li>Decide whether any page belongs under another page.</li>
+                    <li>Keep the navigation simple and clear.</li>
+                </ul>
+
+                <div class="deliverable-box">
+
+                    <strong>Deliverable:</strong>
+
+                    Page list + planned navigation menu.
+
+                </div>
+
+            </div>
+
+
+            <!-- PRACTICAL 03 -->
+
+            <div class="practical-card">
+
+                <span class="practical-number">
+                    PRACTICAL 03
+                </span>
+
+                <h3>
+                    Build Categories & Subcategories
+                </h3>
+
+                <p>
+                    If your website contains products, services or
+                    content groups, organize them into categories.
+                </p>
+
+                <ul>
+                    <li>Create main categories.</li>
+                    <li>Add relevant subcategories if required.</li>
+                    <li>Avoid unnecessary categories.</li>
+                    <li>Make category names easy for visitors to understand.</li>
+                </ul>
+
+                <div class="deliverable-box">
+
+                    <strong>Deliverable:</strong>
+
+                    Category and subcategory structure.
+
+                </div>
+
+            </div>
+
+
+            <!-- PRACTICAL 04 -->
+
+            <div class="practical-card">
+
+                <span class="practical-number">
+                    PRACTICAL 04
+                </span>
+
+                <h3>
+                    Map the User Journey
+                </h3>
+
+                <p>
+                    Select one important visitor goal and map the path
+                    from landing on the website to completing the action.
+                </p>
+
+                <ul>
+                    <li>Where does the visitor enter?</li>
+                    <li>What page do they visit next?</li>
+                    <li>What information do they need?</li>
+                    <li>What CTA should they see?</li>
+                    <li>What is the final desired action?</li>
+                </ul>
+
+                <div class="deliverable-box">
+
+                    <strong>Example:</strong>
+
+                    Home → Products → Product → Enquire
+
+                </div>
+
+            </div>
+
+
+            <!-- PRACTICAL 05 -->
+
+            <div class="practical-card">
+
+                <span class="practical-number">
+                    PRACTICAL 05
+                </span>
+
+                <h3>
+                    Create Your Website Sitemap
+                </h3>
+
+                <p>
+                    Combine everything you planned into one visual
+                    website structure.
+                </p>
+
+                <ul>
+                    <li>Start with Home.</li>
+                    <li>Add the main pages.</li>
+                    <li>Add categories and subcategories.</li>
+                    <li>Show the page hierarchy clearly.</li>
+                    <li>Make sure the sitemap matches your navigation.</li>
+                </ul>
+
+                <div class="deliverable-box">
+
+                    <strong>Deliverable:</strong>
+
+                    One complete sitemap for your project.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    ASSIGNMENT
+    =========================================== -->
+
+    <section class="lesson-section">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>12 — Assignment</small>
+
+                <h2>Create Your Website Structure Plan</h2>
+
+                <p>
+                    Prepare a complete structure plan for the same
+                    website/project you are building throughout the course.
+                </p>
+
+            </div>
+
+
+            <div class="assignment-card">
+
+                <h3>
+                    Website Structure Planning Document
+                </h3>
+
+                <p>
+                    Your document should contain the following:
+                </p>
+
+
+                <div class="assignment-list">
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Business name
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Business goal
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Target audience
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Required website pages
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Main navigation
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Categories
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Subcategories if required
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Primary CTA
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        User journey
+                    </div>
+
+                    <div class="assignment-item">
+                        <i class="bi bi-check-circle"></i>
+                        Complete sitemap
+                    </div>
+
+                </div>
+
+
+                <div class="deliverable-box" style="margin-top:25px;">
+
+                    <strong>Final Submission:</strong>
+
+                    Submit your website structure plan as a PDF,
+                    document, or clearly designed image/diagram,
+                    according to your trainer's instructions.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    QUICK QUIZ
+    =========================================== -->
+
+    <section class="lesson-section lesson-light">
+
+        <div class="lesson-container">
+
+            <div class="lesson-heading">
+
+                <small>13 — Quick Quiz</small>
+
+                <h2>Check Your Understanding</h2>
+
+                <p>
+                    Answer the questions before moving to Module 4.
+                </p>
+
+            </div>
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="quiz-card">
+
+                <div class="quiz-question">
+                    1. What should you identify before planning website pages?
+                </div>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="wrong">
+                    Font style
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="correct">
+                    Business goal and target audience
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q1" value="wrong">
+                    Footer colour
+                </label>
+
+                <div class="quiz-result" id="result1"></div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="quiz-card">
+
+                <div class="quiz-question">
+                    2. What is the purpose of a sitemap in website planning?
+                </div>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="wrong">
+                    To choose website colours
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="wrong">
+                    To write product descriptions
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q2" value="correct">
+                    To show the structure and relationship between pages
+                </label>
+
+                <div class="quiz-result" id="result2"></div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="quiz-card">
+
+                <div class="quiz-question">
+                    3. Which is an example of a user journey?
+                </div>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="wrong">
+                    Logo → Colour → Font
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="correct">
+                    Home → Products → Product → Enquire
+                </label>
+
+                <label class="quiz-option">
+                    <input type="radio" name="q3" value="wrong">
+                    Header → CSS → JavaScript
+                </label>
+
+                <div class="quiz-result" id="result3"></div>
+
+            </div>
+
+
+            <button
+                class="module-btn primary"
+                onclick="checkQuiz()">
+
+                Check Answers
+                <i class="bi bi-check2-circle"></i>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    MODULE COMPLETE
+    =========================================== -->
+
+    <section class="lesson-section module-complete">
+
+        <div class="lesson-container">
+
+            <div class="complete-icon">
+
+                <i class="bi bi-diagram-3"></i>
+
+            </div>
+
+            <h2>
+                Module 3 Complete
+            </h2>
+
+            <p>
+                You have learned how to move from a business goal
+                to a complete website structure using pages,
+                navigation, categories, user journeys and a sitemap.
+            </p>
+
+
+            <div class="module-buttons">
+
+                <a href="module2.html" class="module-btn">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                    Module 2
+
+                </a>
+
+
+                <a href="module4.html" class="module-btn primary">
+
+                    Module 4: E-Commerce
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+                    FOOTER
+    =========================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+
+                <strong>
+                    WEB & E-COMMERCE Learning Lab
+                </strong>
+
+                <p>
+                    Practical Web Skills for Digital Marketing Students
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Module 3 — Website Structure Planning
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+                    JAVASCRIPT
+    =========================================== -->
+
+    <script>
+
+        /* ==========================================
+                    MOBILE MENU
+        =========================================== */
+
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        if (menuToggle && navMenu) {
+
+            menuToggle.addEventListener("click", function () {
+
+                navMenu.classList.toggle("active");
+
+            });
+
+        }
+
+
+        /* ==========================================
+                    QUIZ
+        =========================================== */
+
+        function checkQuiz() {
+
+            const answers = {
+
+                q1: "correct",
+                q2: "correct",
+                q3: "correct"
+
+            };
+
+            let score = 0;
+
+
+            Object.keys(answers).forEach(function (question) {
+
+                const selected =
+                    document.querySelector(
+                        'input[name="' + question + '"]:checked'
+                    );
+
+                const result =
+                    document.getElementById(
+                        "result" + question.substring(1)
+                    );
+
+
+                if (!selected) {
+
+                    result.style.display = "block";
+                    result.textContent = "Please select an answer.";
+                    result.style.color = "#d47b00";
+
+                    return;
+
+                }
+
+
+                if (selected.value === answers[question]) {
+
+                    score++;
+
+                    result.style.display = "block";
+                    result.textContent = "Correct!";
+                    result.style.color = "#16805c";
+
+                } else {
+
+                    result.style.display = "block";
+                    result.textContent = "Review this concept and try again.";
+                    result.style.color = "#c54b4b";
+
+                }
+
+            });
+
+
+            if (score === 3) {
+
+                alert(
+                    "Excellent! You got all 3 questions correct."
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
