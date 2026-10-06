@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Capstone Project | WebTech & E-Commerce Learning Portal</title>
+
+    <meta name="description"
+        content="Complete capstone project for Digital Marketing students covering website planning, domain, hosting, WordPress, e-commerce, AI content, SEO and website audit.">
+
+    <meta name="keywords"
+        content="digital marketing capstone, website project, WordPress project, GitHub Pages, domain hosting, WooCommerce, SEO project">
+
+    <meta name="author" content="Digital Marketing Training">
+
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ==========================================
+           CAPSTONE PAGE
+        ========================================== */
+
+        .capstone-hero {
+            padding: 100px 0 80px;
+            background: linear-gradient(135deg, #f4fbff, #ffffff);
+        }
+
+        .capstone-hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .capstone-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border-radius: 50px;
+            background: #e8f8ff;
+            color: #0099cc;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .capstone-hero h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.08;
+            margin: 0 0 20px;
+        }
+
+        .capstone-hero h1 span {
+            color: #0099cc;
+        }
+
+        .capstone-hero-description {
+            max-width: 650px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #5f6b75;
+            margin-bottom: 28px;
+        }
+
+        .capstone-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .capstone-visual {
+            background: #ffffff;
+            border: 1px solid #e2edf2;
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: 0 18px 45px rgba(0, 80, 110, 0.08);
+        }
+
+        .visual-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #7b8790;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .project-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .project-flow-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            border-radius: 12px;
+            background: #f7fbfd;
+        }
+
+        .project-flow-item i {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            background: #e5f7ff;
+            color: #0099cc;
+        }
+
+        .project-flow-item strong {
+            display: block;
+            font-size: 14px;
+        }
+
+        .project-flow-item small {
+            display: block;
+            color: #7a858d;
+            margin-top: 2px;
+        }
+
+        /* ==========================================
+           GENERAL SECTION
+        ========================================== */
+
+        .capstone-content-section {
+            padding: 90px 0;
+        }
+
+        .capstone-content-section.light {
+            background: #f8fcfe;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-intro .section-label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section-intro h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 36px;
+            margin: 0 0 14px;
+        }
+
+        .section-intro h2 span {
+            color: #0099cc;
+        }
+
+        .section-intro p {
+            color: #66737d;
+            line-height: 1.8;
+        }
+
+        /* ==========================================
+           OBJECTIVE CARDS
+        ========================================== */
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .objective-card {
+            padding: 25px;
+            background: #ffffff;
+            border: 1px solid #e2edf2;
+            border-radius: 18px;
+        }
+
+        .objective-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #e9f8ff;
+            color: #0099cc;
+            margin-bottom: 18px;
+            font-size: 19px;
+        }
+
+        .objective-card h3 {
+            font-size: 18px;
+            margin: 0 0 8px;
+        }
+
+        .objective-card p {
+            color: #68757e;
+            line-height: 1.65;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* ==========================================
+           PROJECT STEPS
+        ========================================== */
+
+        .steps-container {
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .project-step {
+            position: relative;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 25px;
+            padding: 30px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border: 1px solid #e1edf2;
+            border-radius: 20px;
+        }
+
+        .project-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 16px;
+            background: #eaf8ff;
+            color: #0099cc;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        .project-step h3 {
+            margin: 0 0 8px;
+            font-size: 22px;
+        }
+
+        .project-step>div:last-child>p {
+            color: #66737d;
+            line-height: 1.7;
+            margin-top: 0;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .task-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: #4f5d66;
+            line-height: 1.55;
+            font-size: 14px;
+        }
+
+        .task-list li i {
+            color: #0099cc;
+            margin-top: 4px;
+        }
+
+        .deliverable-box {
+            margin-top: 20px;
+            padding: 16px 18px;
+            background: #f5fbfe;
+            border-left: 4px solid #0099cc;
+            border-radius: 8px;
+        }
+
+        .deliverable-box strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: #26343c;
+        }
+
+        .deliverable-box span {
+            font-size: 14px;
+            color: #66737d;
+        }
+
+        /* ==========================================
+           TWO PATHS
+        ========================================== */
+
+        .paths-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .path-card {
+            background: #ffffff;
+            border: 1px solid #dcebf1;
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(0, 70, 100, 0.05);
+        }
+
+        .path-card.wordpress {
+            border-top: 4px solid #5b8def;
+        }
+
+        .path-card.custom {
+            border-top: 4px solid #0099cc;
+        }
+
+        .path-heading {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .path-icon {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            display: grid;
+            place-items: center;
+            border-radius: 14px;
+            background: #eaf8ff;
+            color: #0099cc;
+            font-size: 21px;
+        }
+
+        .wordpress .path-icon {
+            background: #edf2ff;
+            color: #4d6fd8;
+        }
+
+        .path-heading h3 {
+            margin: 0 0 5px;
+            font-size: 22px;
+        }
+
+        .path-heading p {
+            margin: 0;
+            color: #73808a;
+            font-size: 14px;
+        }
+
+        .path-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin: 24px 0;
+        }
+
+        .path-flow-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            padding: 12px 0;
+        }
+
+        .path-flow-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 11px;
+            top: 38px;
+            height: 18px;
+            width: 1px;
+            background: #cfe2e9;
+        }
+
+        .path-flow-item .flow-dot {
+            width: 24px;
+            height: 24px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #e8f8ff;
+            color: #0099cc;
+            font-size: 11px;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+
+        .wordpress .path-flow-item .flow-dot {
+            background: #edf2ff;
+            color: #4d6fd8;
+        }
+
+        .path-flow-item span:last-child {
+            font-size: 14px;
+            color: #4d5961;
+        }
+
+        .platform-box {
+            padding: 16px;
+            background: #f7fbfd;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .platform-box strong {
+            font-size: 13px;
+        }
+
+        .platform-box p {
+            margin: 5px 0 0;
+            font-size: 13px;
+            color: #6e7a83;
+            line-height: 1.6;
+        }
+
+        .guide-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 22px;
+        }
+
+        .guide-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 9px;
+            border: 1px solid #d7e7ed;
+            background: #ffffff;
+            color: #394952;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .guide-btn:hover {
+            border-color: #0099cc;
+            color: #0099cc;
+            transform: translateY(-1px);
+        }
+
+        /* ==========================================
+           WEBSITE PLANNING
+        ========================================== */
+
+        .planning-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+        .planning-card {
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid #e0edf2;
+            border-radius: 18px;
+        }
+
+        .planning-card h3 {
+            margin: 0 0 16px;
+            font-size: 20px;
+        }
+
+        .planning-card p {
+            color: #68757e;
+            line-height: 1.7;
+        }
+
+        .sitemap {
+            padding: 20px;
+            background: #f7fbfd;
+            border-radius: 12px;
+            font-family: monospace;
+            line-height: 1.8;
+            color: #45545d;
+            font-size: 14px;
+            white-space: pre-line;
+        }
+
+        /* ==========================================
+           CHECKLIST
+        ========================================== */
+
+        .checklist-wrapper {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            border: 1px solid #e0edf2;
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .checklist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 25px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .checklist li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #eef4f6;
+            font-size: 14px;
+            color: #52616a;
+        }
+
+        .checklist li i {
+            color: #0099cc;
+            margin-top: 3px;
+        }
+
+        /* ==========================================
+           MARKS TABLE
+        ========================================== */
+
+        .evaluation-table-wrapper {
+            max-width: 850px;
+            margin: auto;
+            overflow-x: auto;
+        }
+
+        .evaluation-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border: 1px solid #dfecef;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .evaluation-table th,
+        .evaluation-table td {
+            padding: 15px 18px;
+            text-align: left;
+            border-bottom: 1px solid #e7f0f3;
+        }
+
+        .evaluation-table th {
+            background: #effaff;
+            color: #33444d;
+            font-size: 14px;
+        }
+
+        .evaluation-table td {
+            color: #596870;
+            font-size: 14px;
+        }
+
+        .evaluation-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .marks {
+            font-weight: 700;
+            color: #0099cc !important;
+            text-align: right !important;
+        }
+
+        .total-row td {
+            font-weight: 800;
+            background: #f5fbfd;
+            color: #25343c !important;
+        }
+
+        /* ==========================================
+           SUBMISSION
+        ========================================== */
+
+        .submission-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 35px;
+            background: linear-gradient(135deg, #effaff, #ffffff);
+            border: 1px solid #d7edf5;
+            border-radius: 22px;
+        }
+
+        .submission-box h3 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .submission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .submission-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #e2edf1;
+            border-radius: 12px;
+        }
+
+        .submission-item i {
+            color: #0099cc;
+            margin-top: 3px;
+        }
+
+        .submission-item span {
+            font-size: 14px;
+            color: #55636b;
+        }
+
+        /* ==========================================
+           COMPLETION
+        ========================================== */
+
+        .completion-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #eefaff, #ffffff);
+        }
+
+        .completion-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 22px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #e2f7ff;
+            color: #0099cc;
+            font-size: 30px;
+        }
+
+        .completion-section h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: 38px;
+            margin: 0 0 14px;
+        }
+
+        .completion-section h2 span {
+            color: #0099cc;
+        }
+
+        .completion-section p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: #68757e;
+            line-height: 1.8;
+        }
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            .capstone-hero-grid,
+            .paths-grid,
+            .planning-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .objective-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .capstone-hero {
+                padding: 70px 0 55px;
+            }
+
+            .capstone-content-section {
+                padding: 65px 0;
+            }
+
+            .objective-grid,
+            .checklist,
+            .submission-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-step {
+                grid-template-columns: 1fr;
+                padding: 24px;
+            }
+
+            .section-intro h2 {
+                font-size: 29px;
+            }
+
+            .capstone-hero h1 {
+                font-size: 40px;
+            }
+
+            .path-card,
+            .checklist-wrapper,
+            .submission-box {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+    =========================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </span>
+
+                <span>
+                    <strong>WebTech</strong>
+                    <small>& E-Commerce</small>
+                </span>
+
+            </a>
+
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">Home</a>
+
+                <a href="index.html#modules">Modules</a>
+
+                <a href="index.html#learning-flow">How It Works</a>
+
+                <a href="capstone.html" class="active">Capstone</a>
+
+                <a href="index.html#resources">Resources</a>
+
+            </nav>
+
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section class="capstone-hero">
+
+            <div class="container capstone-hero-grid">
+
+                <div>
+
+                    <div class="capstone-label">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        FINAL PROJECT
+
+                    </div>
+
+
+                    <h1>
+
+                        Build One Complete
+
+                        <span>Website</span>
+
+                    </h1>
+
+
+                    <p class="capstone-hero-description">
+
+                        Apply everything you learned in Modules 1–7 to plan,
+                        build, publish, optimize and audit one complete
+                        business website.
+
+                    </p>
+
+
+                    <div class="capstone-buttons">
+
+                        <a href="#project-steps" class="btn btn-primary">
+
+                            Start Capstone
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </a>
+
+
+                        <a href="index.html#modules" class="btn btn-secondary">
+
+                            Review Modules
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Learning Path Visual -->
+
+                <div class="capstone-visual">
+
+                    <div class="visual-title">
+
+                        YOUR FINAL PROJECT
+
+                    </div>
+
+
+                    <div class="project-flow">
+
+                        <div class="project-flow-item">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <div>
+
+                                <strong>Business</strong>
+
+                                <small>Choose your project</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-flow-item">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <div>
+
+                                <strong>Domain & Hosting</strong>
+
+                                <small>Publish your website</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-flow-item">
+
+                            <i class="fa-solid fa-laptop"></i>
+
+                            <div>
+
+                                <strong>Website</strong>
+
+                                <small>Build your project</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-flow-item">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <div>
+
+                                <strong>E-Commerce</strong>
+
+                                <small>Add store features if needed</small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-flow-item">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <div>
+
+                                <strong>SEO & Audit</strong>
+
+                                <small>Optimize and test</small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             OBJECTIVES
+        =========================================== -->
+
+        <section class="capstone-content-section">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        PROJECT OBJECTIVE
+                    </span>
+
+                    <h2>
+                        What You Will
+                        <span>Build</span>
+                    </h2>
+
+                    <p>
+                        The capstone brings together the practical skills
+                        from the complete course into one real-world project.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-grid">
+
+
+                    <div class="objective-card">
+
+                        <div class="objective-icon">
+
+                            <i class="fa-solid fa-sitemap"></i>
+
+                        </div>
+
+                        <h3>Plan</h3>
+
+                        <p>
+                            Select a business, identify the audience,
+                            define the goal and create the website structure.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <div class="objective-icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
+
+                        <h3>Build</h3>
+
+                        <p>
+                            Create a custom website or build and manage
+                            a website using WordPress.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <div class="objective-icon">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        </div>
+
+                        <h3>Create</h3>
+
+                        <p>
+                            Use AI responsibly to create useful website,
+                            product and marketing content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <div class="objective-icon">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3>Optimize</h3>
+
+                        <p>
+                            Apply SEO, connect Search Console and complete
+                            a final website audit.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PROJECT STEPS
+        =========================================== -->
+
+        <section class="capstone-content-section light" id="project-steps">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        PROJECT ROADMAP
+                    </span>
+
+                    <h2>
+                        Build Your Project
+                        <span>Step by Step</span>
+                    </h2>
+
+                    <p>
+                        Follow these steps from business selection to
+                        final SEO audit.
+                    </p>
+
+                </div>
+
+
+                <div class="steps-container">
+
+
+                    <!-- STEP 01 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">01</div>
+
+                        <div>
+
+                            <h3>
+                                Choose a Business
+                            </h3>
+
+                            <p>
+                                Select one real or imaginary business
+                                for your complete project.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Choose a business type.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Identify the target audience.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Define the main business goal.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Decide whether the website needs e-commerce.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>Student Deliverable</strong>
+
+                                <span>
+                                    Business Name + Business Type +
+                                    Target Audience + Main Goal
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 02 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">02</div>
+
+                        <div>
+
+                            <h3>
+                                Domain & Hosting Setup
+                            </h3>
+
+                            <p>
+                                Choose the appropriate publishing path
+                                based on how your website is built.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Select a suitable domain name.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Understand the difference between domain and hosting.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Select the correct hosting method.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Publish the website and test HTTPS.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>Choose Your Deployment Path</strong>
+
+                                <span>
+                                    Custom Website → GitHub Pages |
+                                    WordPress → WordPress-compatible Hosting
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 03 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">03</div>
+
+                        <div>
+
+                            <h3>
+                                Plan Website Structure
+                            </h3>
+
+                            <p>
+                                Use the planning process from Module 3
+                                before building the website.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Define the website pages.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create navigation.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create categories and subcategories.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Plan the user journey.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create a sitemap.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>Student Deliverable</strong>
+
+                                <span>
+                                    Website sitemap + navigation structure
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 04 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">04</div>
+
+                        <div>
+
+                            <h3>
+                                Build the Website
+                            </h3>
+
+                            <p>
+                                Choose one of the two website development
+                                approaches below.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Custom HTML/CSS/JavaScript/Bootstrap website
+                                    OR
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    WordPress website
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create the required pages.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Add header, footer and navigation.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Make the website responsive.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 05 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">05</div>
+
+                        <div>
+
+                            <h3>
+                                Add E-Commerce
+                            </h3>
+
+                            <p>
+                                If your selected business sells products,
+                                create the e-commerce part of the project.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create product categories.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Add products.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Add simple or variable products.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Configure cart and checkout.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Test the customer journey.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>WordPress Projects</strong>
+
+                                <span>
+                                    Use WooCommerce for the e-commerce section.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 06 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">06</div>
+
+                        <div>
+
+                            <h3>
+                                Create AI-Assisted Content
+                            </h3>
+
+                            <p>
+                                Use AI as a content creation assistant,
+                                not as a replacement for human review.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create homepage content.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create product or service descriptions.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Generate blog ideas.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Create CTA and marketing copy.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Fact-check and edit AI output.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>Student Deliverable</strong>
+
+                                <span>
+                                    AI prompt + final edited content
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 07 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">07</div>
+
+                        <div>
+
+                            <h3>
+                                Apply SEO
+                            </h3>
+
+                            <p>
+                                Optimize the website for search engines
+                                using the concepts from Module 6.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Perform basic keyword research.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Optimize SEO titles and meta descriptions.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Optimize URLs and headings.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Add image alt text.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Add internal links.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Check mobile usability, HTTPS and broken links.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 08 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">08</div>
+
+                        <div>
+
+                            <h3>
+                                Connect Search Console & SEO Tools
+                            </h3>
+
+                            <p>
+                                Use SEO tools to understand how the website
+                                can be improved.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Connect Google Search Console.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Inspect an important URL.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Check indexing status.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Analyse search queries and performance.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Audit a page using SEO tools.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STEP 09 -->
+
+                    <div class="project-step">
+
+                        <div class="step-number">09</div>
+
+                        <div>
+
+                            <h3>
+                                Complete the Final SEO Audit
+                            </h3>
+
+                            <p>
+                                Review the complete website and document
+                                the most important improvements.
+                            </p>
+
+
+                            <ul class="task-list">
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Find website problems.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Collect evidence.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Set priority.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Recommend an action.
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Explain the expected result.
+                                </li>
+
+                            </ul>
+
+
+                            <div class="deliverable-box">
+
+                                <strong>Audit Format</strong>
+
+                                <span>
+                                    Problem → Evidence → Priority →
+                                    Action → Expected Result
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             DEPLOYMENT PATHS
+        =========================================== -->
+
+        <section class="capstone-content-section" id="deployment">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        DEPLOYMENT OPTIONS
+                    </span>
+
+                    <h2>
+                        Choose Your
+                        <span>Website Path</span>
+                    </h2>
+
+                    <p>
+                        The deployment method depends on how you created
+                        your website. Choose the path that matches your project.
+                    </p>
+
+                </div>
+
+
+                <div class="paths-grid">
+
+
+                    <!-- CUSTOM WEBSITE -->
+
+                    <div class="path-card custom">
+
+                        <div class="path-heading">
+
+                            <div class="path-icon">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>Custom Website</h3>
+
+                                <p>
+                                    HTML + CSS + JavaScript + Bootstrap
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="path-flow">
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">1</span>
+
+                                <span>
+                                    Create your website files
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">2</span>
+
+                                <span>
+                                    Purchase a domain through Square Brothers
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">3</span>
+
+                                <span>
+                                    Create a GitHub repository
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">4</span>
+
+                                <span>
+                                    Upload your website files
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">5</span>
+
+                                <span>
+                                    Enable GitHub Pages
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">6</span>
+
+                                <span>
+                                    Connect the custom domain
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">7</span>
+
+                                <span>
+                                    Configure DNS records
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">8</span>
+
+                                <span>
+                                    Test HTTPS and the live website
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="platform-box">
+
+                            <strong>
+                                Recommended Course Setup
+                            </strong>
+
+                            <p>
+                                Domain: Square Brothers<br>
+                                Hosting: GitHub Pages
+                            </p>
+
+                        </div>
+
+
+                        <div class="guide-buttons">
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-solid fa-globe"></i>
+
+                                Square Brothers
+
+                            </a>
+
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-brands fa-github"></i>
+
+                                GitHub
+
+                            </a>
+
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-solid fa-book-open"></i>
+
+                                Setup Guide
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WORDPRESS -->
+
+                    <div class="path-card wordpress">
+
+                        <div class="path-heading">
+
+                            <div class="path-icon">
+
+                                <i class="fa-brands fa-wordpress"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3>WordPress Website</h3>
+
+                                <p>
+                                    WordPress + WooCommerce
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="path-flow">
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">1</span>
+
+                                <span>
+                                    Choose and purchase a domain
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">2</span>
+
+                                <span>
+                                    Choose WordPress-compatible hosting
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">3</span>
+
+                                <span>
+                                    Connect the domain to your hosting
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">4</span>
+
+                                <span>
+                                    Install WordPress
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">5</span>
+
+                                <span>
+                                    Open WordPress Admin Dashboard
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">6</span>
+
+                                <span>
+                                    Build pages and navigation
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">7</span>
+
+                                <span>
+                                    Install WooCommerce if required
+                                </span>
+
+                            </div>
+
+                            <div class="path-flow-item">
+
+                                <span class="flow-dot">8</span>
+
+                                <span>
+                                    Enable SSL and test the live website
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="platform-box">
+
+                            <strong>
+                                Important
+                            </strong>
+
+                            <p>
+                                GitHub Pages is not used for WordPress hosting.
+                                WordPress requires a hosting environment that
+                                supports WordPress.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guide-buttons">
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-solid fa-globe"></i>
+
+                                Domain Guide
+
+                            </a>
+
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-solid fa-server"></i>
+
+                                Hosting Guide
+
+                            </a>
+
+
+                            <a href="#" class="guide-btn">
+
+                                <i class="fa-brands fa-wordpress"></i>
+
+                                WordPress Guide
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             WEBSITE PLANNING
+        =========================================== -->
+
+        <section class="capstone-content-section light">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        PLANNING CHECKPOINT
+                    </span>
+
+                    <h2>
+                        Plan Before You
+                        <span>Build</span>
+                    </h2>
+
+                    <p>
+                        Students should complete the planning stage before
+                        starting the actual website development.
+                    </p>
+
+                </div>
+
+
+                <div class="planning-grid">
+
+
+                    <div class="planning-card">
+
+                        <h3>
+                            <i class="fa-solid fa-bullseye"></i>
+                            Business Goal
+                        </h3>
+
+                        <p>
+                            What should the website help the business achieve?
+                        </p>
+
+                        <ul class="task-list">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Generate enquiries
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Sell products
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Promote services
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Build brand awareness
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="planning-card">
+
+                        <h3>
+                            <i class="fa-solid fa-users"></i>
+                            Target Audience
+                        </h3>
+
+                        <p>
+                            Identify who the website is designed for.
+                        </p>
+
+                        <ul class="task-list">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Age / customer group
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Location
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Customer needs
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Search intent
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="planning-card">
+
+                        <h3>
+                            <i class="fa-solid fa-sitemap"></i>
+                            Sitemap Example
+                        </h3>
+
+                        <div class="sitemap">
+
+Home
+├── About
+├── Products
+│   ├── Category 1
+│   ├── Category 2
+│   └── Category 3
+├── Blog
+├── Contact
+└── Privacy Policy
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="planning-card">
+
+                        <h3>
+                            <i class="fa-solid fa-route"></i>
+                            User Journey
+                        </h3>
+
+                        <div class="sitemap">
+
+Home
+  ↓
+Products / Services
+  ↓
+Category
+  ↓
+Product / Service
+  ↓
+CTA
+  ↓
+Enquiry / Purchase
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FINAL CHECKLIST
+        =========================================== -->
+
+        <section class="capstone-content-section">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        FINAL CHECKLIST
+                    </span>
+
+                    <h2>
+                        Before You
+                        <span>Submit</span>
+                    </h2>
+
+                    <p>
+                        Use this checklist to make sure your project is complete.
+                    </p>
+
+                </div>
+
+
+                <div class="checklist-wrapper">
+
+                    <ul class="checklist">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Business goal is clearly defined.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Target audience is identified.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Website sitemap is completed.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Navigation works correctly.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Website is responsive.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Domain and hosting are configured.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>HTTPS is working.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Products and categories are added if required.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Cart and checkout are tested if applicable.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>AI-generated content has been reviewed.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>SEO titles and meta descriptions are added.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Images have suitable alt text.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Internal links are checked.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Google Search Console is connected.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Important URL has been inspected.</span>
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Final SEO audit is completed.</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SUBMISSION
+        =========================================== -->
+
+        <section class="capstone-content-section light">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        FINAL SUBMISSION
+                    </span>
+
+                    <h2>
+                        What Students
+                        <span>Submit</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="submission-box">
+
+                    <h3>
+                        Project Submission Package
+                    </h3>
+
+                    <p>
+                        Submit the following items after completing the capstone.
+                    </p>
+
+
+                    <div class="submission-grid">
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-link"></i>
+
+                            <span>
+                                Live website URL
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-sitemap"></i>
+
+                            <span>
+                                Website sitemap
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-camera"></i>
+
+                            <span>
+                                Important website screenshots
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            <span>
+                                E-commerce screenshots if applicable
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            <span>
+                                AI prompt and final edited content
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <span>
+                                SEO optimization checklist
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <span>
+                                Google Search Console screenshot
+                            </span>
+
+                        </div>
+
+
+                        <div class="submission-item">
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                            <span>
+                                Final SEO audit report
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             EVALUATION
+        =========================================== -->
+
+        <section class="capstone-content-section">
+
+            <div class="container">
+
+                <div class="section-intro">
+
+                    <span class="section-label">
+                        EVALUATION
+                    </span>
+
+                    <h2>
+                        Project
+                        <span>Assessment</span>
+                    </h2>
+
+                    <p>
+                        A simple 100-mark evaluation for the final project.
+                    </p>
+
+                </div>
+
+
+                <div class="evaluation-table-wrapper">
+
+                    <table class="evaluation-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Area
+                                </th>
+
+                                <th class="marks">
+                                    Marks
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Website Planning & Structure</td>
+                                <td class="marks">10</td>
+                            </tr>
+
+                            <tr>
+                                <td>Website Development</td>
+                                <td class="marks">20</td>
+                            </tr>
+
+                            <tr>
+                                <td>E-Commerce Implementation</td>
+                                <td class="marks">15</td>
+                            </tr>
+
+                            <tr>
+                                <td>AI Content Creation</td>
+                                <td class="marks">10</td>
+                            </tr>
+
+                            <tr>
+                                <td>SEO Optimization</td>
+                                <td class="marks">20</td>
+                            </tr>
+
+                            <tr>
+                                <td>Search Console & SEO Tools</td>
+                                <td class="marks">10</td>
+                            </tr>
+
+                            <tr>
+                                <td>Final SEO Audit</td>
+                                <td class="marks">10</td>
+                            </tr>
+
+                            <tr>
+                                <td>Project Presentation</td>
+                                <td class="marks">5</td>
+                            </tr>
+
+                            <tr class="total-row">
+
+                                <td>
+                                    Total
+                                </td>
+
+                                <td class="marks">
+                                    100
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             COMPLETION
+        =========================================== -->
+
+        <section class="completion-section">
+
+            <div class="container">
+
+                <div class="completion-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+
+                <span class="section-label">
+                    COURSE COMPLETE
+                </span>
+
+
+                <h2>
+
+                    From Learning to
+
+                    <span>Building.</span>
+
+                </h2>
+
+
+                <p>
+
+                    You have now completed the practical Web & E-Commerce
+                    learning journey — from understanding domains and websites
+                    to building, publishing, optimizing and auditing a complete
+                    business website.
+
+                </p>
+
+
+                <div class="capstone-buttons">
+
+                    <a href="index.html#modules" class="btn btn-secondary">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Back to Modules
+
+                    </a>
+
+
+                    <a href="index.html" class="btn btn-primary">
+
+                        Learning Portal
+
+                        <i class="fa-solid fa-house"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <span class="logo-icon">
+
+                        <i class="fa-solid fa-code"></i>
+
+                    </span>
+
+                    <span>
+
+                        <strong>WebTech</strong>
+
+                        <small>& E-Commerce</small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    A practical learning portal for Digital Marketing
+                    students.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>Learn</h4>
+
+                <a href="index.html#modules">
+                    Modules
+                </a>
+
+                <a href="index.html#learning-flow">
+                    How It Works
+                </a>
+
+                <a href="capstone.html">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>Course</h4>
+
+                <a href="#project-steps">
+                    Practical Tasks
+                </a>
+
+                <a href="#submission">
+                    Submission
+                </a>
+
+                <a href="#evaluation">
+                    Evaluation
+                </a>
+
+                <a href="#deployment">
+                    Deployment
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+
+                    © <span id="currentYear"></span>
+                    WebTech & E-Commerce Learning Portal.
+                    All rights reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script>
+
+        /* Mobile Navigation */
+
+        const menuToggle = document.getElementById("menuToggle");
+
+        const mainNav = document.getElementById("mainNav");
+
+
+        if (menuToggle && mainNav) {
+
+            menuToggle.addEventListener("click", function () {
+
+                mainNav.classList.toggle("show");
+
+            });
+
+
+            mainNav.querySelectorAll("a").forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    mainNav.classList.remove("show");
+
+                });
+
+            });
+
+        }
+
+
+        /* Current Year */
+
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+
+            currentYear.textContent = new Date().getFullYear();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
