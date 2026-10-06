@@ -34,6 +34,8 @@
 
     <style>
 
+        
+
         /* =========================================
            CAPSTONE PAGE
         ========================================= */
@@ -570,6 +572,96 @@
             }
         }
 
+        /* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: #f4fbfe;
+    border-top: 1px solid #dceff5;
+    padding: 55px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1.4fr;
+    gap: 45px;
+}
+
+.footer-brand p {
+    margin-top: 15px;
+    max-width: 280px;
+    color: #687b83;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.footer-logo img {
+    width: 105px;
+    height: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.footer-links h4 {
+    margin: 0 0 10px;
+    color: #19333d;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: #687b83;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #0099cc;
+    padding-left: 3px;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #dceff5;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #7a898f;
+    font-size: 13px;
+}
+
+
+/* Footer Responsive */
+
+@media (max-width: 700px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
     </style>
 </head>
 
@@ -577,38 +669,46 @@
 <body>
 
     <!-- =========================================
-         NAVBAR
-    ========================================== -->
+     NAVBAR
+========================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="container">
+    <div class="container">
 
-            <a href="index.html" class="logo">
-                <img src="img/ank-logo.png" alt="ANK WebStudio">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <img src="img/ank-logo.png" alt="ANK WebStudio">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
             </a>
 
-            <nav class="main-nav">
+            <a href="index.html#modules">
+                Modules
+            </a>
 
-                <a href="index.html">Home</a>
+            <a href="index.html#how-it-works">
+                How It Works
+            </a>
 
-                <a href="index.html#modules">Modules</a>
+            <a href="capstone.html" class="active">
+                Capstone
+            </a>
 
-                <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#resources">
+                Resources
+            </a>
 
-                <a href="capstone.html" class="active">
-                    Capstone
-                </a>
+        </nav>
 
-                <a href="index.html#resources">
-                    Resources
-                </a>
+    </div>
 
-            </nav>
-
-        </div>
-
-    </header>
+</header>
 
 
     <!-- =========================================
@@ -1766,12 +1866,98 @@
 
 
     <!-- =========================================
-         FOOTER
-    ========================================== -->
+     FOOTER
+========================================== -->
 
-    <footer class="site-footer">
+<footer class="site-footer">
 
-        <div class="container">
+    <div class="container">
+
+        <div class="footer-content">
+
+            <!-- Brand -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+                    <img src="img/ank-logo.png" alt="ANK WebStudio">
+                </a>
+
+                <p>
+                    Practical Web Skills for Digital Marketing Students
+                </p>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+
+                <h4>Quick Links</h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#modules">
+                    Modules
+                </a>
+
+                <a href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="capstone.html">
+                    Capstone
+                </a>
+
+                <a href="wordpress-guide.html">
+                    WordPress Guide
+                </a>
+
+            </div>
+
+
+            <!-- Modules -->
+            <div class="footer-links">
+
+                <h4>Modules</h4>
+
+                <a href="module1.html">
+                    Module 1 — Setup
+                </a>
+
+                <a href="module-2.html">
+                    Module 2 — CMS
+                </a>
+
+                <a href="module-3.html">
+                    Module 3 — Planning
+                </a>
+
+                <a href="module-4.html">
+                    Module 4 — E-Commerce
+                </a>
+
+                <a href="module-5.html">
+                    Module 5 — AI Content
+                </a>
+
+                <a href="module-6.html">
+                    Module 6 — SEO
+                </a>
+
+                <a href="module-7.html">
+                    Module 7 — SEO Tools
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+
+        <div class="footer-bottom">
 
             <p>
                 © <span id="currentYear"></span>
@@ -1779,12 +1965,14 @@
             </p>
 
             <p>
-                Practical Web Skills for Digital Marketing Students
+                Learn → See → Do → Submit
             </p>
 
         </div>
 
-    </footer>
+    </div>
+
+</footer>
 
 
     <!-- =========================================
