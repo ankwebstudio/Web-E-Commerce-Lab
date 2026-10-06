@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WordPress Practical Guide | Web & E-Commerce Lab</title>
+
+    <meta name="description"
+        content="A practical step-by-step WordPress guide for Digital Marketing students covering WordPress setup, dashboard, themes, pages, menus, plugins, forms, WooCommerce, SEO and publishing.">
+
+    <meta name="keywords"
+        content="WordPress practical guide, WordPress tutorial, WordPress for Digital Marketing, WooCommerce, SEO, WordPress website">
+
+    <meta name="author" content="ANK WebStudio">
+
+    <link rel="icon" href="img/ank-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <style>
+
+        /* =========================================
+           WORDPRESS GUIDE
+        ========================================= */
+
+        .wp-hero {
+            padding: 95px 20px 75px;
+            text-align: center;
+            background: linear-gradient(180deg, #f3fbfe 0%, #ffffff 100%);
+        }
+
+        .wp-label {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: #e5f7fc;
+            color: #0087b5;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .wp-hero h1 {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(36px, 6vw, 62px);
+            line-height: 1.1;
+            color: #172b35;
+        }
+
+        .wp-hero h1 span {
+            color: #0099cc;
+        }
+
+        .wp-hero p {
+            max-width: 760px;
+            margin: auto;
+            color: #687980;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .wp-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .wp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 19px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .wp-btn-primary {
+            background: #0099cc;
+            color: #ffffff;
+        }
+
+        .wp-btn-primary:hover {
+            background: #007fa8;
+            transform: translateY(-2px);
+        }
+
+        .wp-btn-outline {
+            border: 1px solid #cce8f0;
+            background: #ffffff;
+            color: #087d9f;
+        }
+
+        .wp-btn-outline:hover {
+            background: #eefaff;
+        }
+
+
+        /* =========================================
+           PAGE LAYOUT
+        ========================================= */
+
+        .wp-layout {
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 20px;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 45px;
+        }
+
+
+        /* =========================================
+           SIDE NAVIGATION
+        ========================================= */
+
+        .wp-sidebar {
+            position: sticky;
+            top: 25px;
+            align-self: start;
+            padding: 22px;
+            border: 1px solid #dceff5;
+            border-radius: 15px;
+            background: #f8fcfd;
+        }
+
+        .wp-sidebar h3 {
+            margin: 0 0 15px;
+            color: #183640;
+            font-size: 16px;
+        }
+
+        .wp-sidebar a {
+            display: block;
+            padding: 8px 0;
+            color: #62767e;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 1.4;
+            transition: 0.2s ease;
+        }
+
+        .wp-sidebar a:hover {
+            color: #0099cc;
+            padding-left: 4px;
+        }
+
+
+        /* =========================================
+           CONTENT
+        ========================================= */
+
+        .wp-content {
+            min-width: 0;
+        }
+
+        .wp-section {
+            scroll-margin-top: 30px;
+            margin-bottom: 65px;
+        }
+
+        .wp-section-label {
+            color: #0099cc;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .wp-section h2 {
+            margin: 0 0 15px;
+            font-family: "Manrope", sans-serif;
+            font-size: 30px;
+            color: #19333d;
+        }
+
+        .wp-section > p {
+            color: #64777e;
+            line-height: 1.8;
+            margin: 0 0 20px;
+        }
+
+
+        /* =========================================
+           INFO BOX
+        ========================================= */
+
+        .info-box {
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #d9edf3;
+            background: #f5fbfd;
+        }
+
+        .info-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #1c4654;
+        }
+
+        .info-box p {
+            margin: 0;
+            color: #62767e;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           WARNING BOX
+        ========================================= */
+
+        .warning-box {
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid #f0e3c7;
+            background: #fffaf0;
+        }
+
+        .warning-box strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #77551e;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: #75664b;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           STEP CARD
+        ========================================= */
+
+        .step-card {
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid #deedf2;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 8px 25px rgba(0, 120, 160, 0.04);
+        }
+
+        .step-heading {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .step-number {
+            flex: 0 0 auto;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #e5f7fc;
+            color: #0087b5;
+            font-weight: 800;
+        }
+
+        .step-heading h3 {
+            margin: 5px 0 0;
+            font-size: 18px;
+            color: #1c343d;
+        }
+
+        .step-card p {
+            color: #65777e;
+            line-height: 1.7;
+        }
+
+        .step-list {
+            margin: 12px 0 0;
+            padding-left: 20px;
+        }
+
+        .step-list li {
+            padding: 6px 0;
+            color: #566970;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           PATH FLOW
+        ========================================= */
+
+        .path-flow {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 25px 0;
+        }
+
+        .path-item {
+            padding: 10px 14px;
+            border-radius: 8px;
+            background: #eefaff;
+            color: #087d9f;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .path-arrow {
+            color: #9aabb1;
+        }
+
+
+        /* =========================================
+           COMPARISON
+        ========================================= */
+
+        .compare-table-wrap {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 14px 16px;
+            border: 1px solid #e2edf0;
+            text-align: left;
+        }
+
+        .compare-table th {
+            background: #eefaff;
+            color: #1e4654;
+        }
+
+        .compare-table td {
+            color: #61737a;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           DASHBOARD GRID
+        ========================================= */
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .dashboard-item {
+            padding: 18px;
+            border: 1px solid #e0edf1;
+            border-radius: 12px;
+            background: #ffffff;
+        }
+
+        .dashboard-item strong {
+            display: block;
+            color: #1d3b45;
+            margin-bottom: 6px;
+        }
+
+        .dashboard-item span {
+            color: #708087;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           PRACTICAL TASK
+        ========================================= */
+
+        .practical-box {
+            padding: 28px;
+            margin-top: 25px;
+            border-radius: 15px;
+            background: #effaff;
+            border: 1px solid #cfeaf2;
+        }
+
+        .practical-box h3 {
+            margin: 0 0 10px;
+            color: #19404d;
+        }
+
+        .practical-box p {
+            margin: 0 0 15px;
+            color: #5d727a;
+            line-height: 1.7;
+        }
+
+        .practical-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .practical-box li {
+            padding: 5px 0;
+            color: #52666d;
+        }
+
+
+        /* =========================================
+           CHECKLIST
+        ========================================= */
+
+        .wp-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .wp-checklist li {
+            position: relative;
+            padding: 11px 0 11px 30px;
+            border-bottom: 1px solid #edf3f5;
+            color: #566970;
+            line-height: 1.6;
+        }
+
+        .wp-checklist li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #0099cc;
+        }
+
+
+        /* =========================================
+           EXTERNAL LINKS
+        ========================================= */
+
+        .resource-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 15px;
+            border-radius: 8px;
+            background: #f1faff;
+            border: 1px solid #d8edf3;
+            color: #087d9f;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .resource-link:hover {
+            background: #e4f7fc;
+        }
+
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .wp-final {
+            padding: 70px 20px;
+            text-align: center;
+            background: #0099cc;
+            color: #ffffff;
+        }
+
+        .wp-final i {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .wp-final h2 {
+            margin: 0 0 12px;
+            font-size: 34px;
+        }
+
+        .wp-final p {
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+            opacity: 0.94;
+        }
+
+        .wp-final-actions {
+            margin-top: 25px;
+        }
+
+        .wp-final .wp-btn {
+            background: #ffffff;
+            color: #0081aa;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 850px) {
+
+            .wp-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .wp-sidebar {
+                position: static;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .wp-hero {
+                padding: 70px 18px 55px;
+            }
+
+            .wp-layout {
+                padding: 50px 18px;
+            }
+
+            .wp-section h2 {
+                font-size: 26px;
+            }
+
+            .step-card {
+                padding: 20px;
+            }
+
+            .path-flow {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .path-arrow {
+                display: none;
+            }
+
+            .wp-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .wp-btn {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <a href="index.html" class="logo">
+                <img src="img/ank-logo.png" alt="ANK WebStudio">
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#modules">
+                    Modules
+                </a>
+
+                <a href="index.html#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="capstone.html">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="wp-hero">
+
+        <span class="wp-label">
+            Practical Guide
+        </span>
+
+        <h1>
+            Build a Website with
+            <span>WordPress</span>
+        </h1>
+
+        <p>
+            Learn the complete practical workflow from setting up
+            WordPress to creating pages, managing content,
+            adding WooCommerce, applying SEO and publishing
+            a professional website.
+        </p>
+
+        <div class="wp-actions">
+
+            <a href="https://wordpress.org/"
+               target="_blank"
+               rel="noopener"
+               class="wp-btn wp-btn-primary">
+
+                <i class="fa-brands fa-wordpress"></i>
+                WordPress.org
+
+            </a>
+
+            <a href="capstone.html"
+               class="wp-btn wp-btn-outline">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Capstone
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <div class="wp-layout">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="wp-sidebar">
+
+            <h3>
+                Guide Contents
+            </h3>
+
+            <a href="#what-is-wordpress">
+                01. What is WordPress?
+            </a>
+
+            <a href="#wordpress-com-vs-org">
+                02. WordPress.com vs WordPress.org
+            </a>
+
+            <a href="#domain-hosting">
+                03. Domain & Hosting
+            </a>
+
+            <a href="#install-wordpress">
+                04. Install WordPress
+            </a>
+
+            <a href="#login">
+                05. Login to Dashboard
+            </a>
+
+            <a href="#dashboard">
+                06. Understand Dashboard
+            </a>
+
+            <a href="#theme">
+                07. Choose a Theme
+            </a>
+
+            <a href="#pages">
+                08. Create Pages
+            </a>
+
+            <a href="#menu">
+                09. Create Navigation
+            </a>
+
+            <a href="#plugins">
+                10. Install Plugins
+            </a>
+
+            <a href="#forms">
+                11. Contact Forms
+            </a>
+
+            <a href="#content">
+                12. Website Content
+            </a>
+
+            <a href="#woocommerce">
+                13. WooCommerce
+            </a>
+
+            <a href="#products">
+                14. Add Products
+            </a>
+
+            <a href="#seo">
+                15. Basic SEO
+            </a>
+
+            <a href="#security">
+                16. Security & Backup
+            </a>
+
+            <a href="#testing">
+                17. Test Website
+            </a>
+
+            <a href="#publish">
+                18. Publish
+            </a>
+
+            <a href="#practical">
+                19. Student Practical
+            </a>
+
+            <a href="#checklist">
+                20. Final Checklist
+            </a>
+
+        </aside>
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <main class="wp-content">
+
+
+            <!-- =================================
+                 01 WHAT IS WORDPRESS
+            ================================== -->
+
+            <section class="wp-section" id="what-is-wordpress">
+
+                <div class="wp-section-label">
+                    Step 01
+                </div>
+
+                <h2>
+                    What is WordPress?
+                </h2>
+
+                <p>
+                    WordPress is a content management system (CMS)
+                    used to create and manage websites without
+                    manually coding every page.
+                </p>
+
+                <div class="info-box">
+
+                    <strong>
+                        In this course
+                    </strong>
+
+                    <p>
+                        You will use WordPress to build and manage
+                        a practical business website. You will learn
+                        how to manage content from the dashboard,
+                        install themes and plugins, and add
+                        e-commerce functionality when required.
+                    </p>
+
+                </div>
+
+                <div class="path-flow">
+
+                    <span class="path-item">
+                        Domain
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Hosting
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        WordPress
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Website
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        SEO
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Publish
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 02 COM VS ORG
+            ================================== -->
+
+            <section class="wp-section" id="wordpress-com-vs-org">
+
+                <div class="wp-section-label">
+                    Step 02
+                </div>
+
+                <h2>
+                    WordPress.com vs WordPress.org
+                </h2>
+
+                <p>
+                    These are related to WordPress, but they are
+                    not the same setup.
+                </p>
+
+                <div class="compare-table-wrap">
+
+                    <table class="compare-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    WordPress.com
+                                </th>
+
+                                <th>
+                                    WordPress.org
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    Hosted platform
+                                </td>
+
+                                <td>
+                                    WordPress software that you
+                                    install on your own hosting
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    Hosting is managed by the platform
+                                </td>
+
+                                <td>
+                                    You choose your hosting provider
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    Setup depends on the selected plan
+                                </td>
+
+                                <td>
+                                    More control over website,
+                                    plugins and hosting
+                                </td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>
+                                    Good for learning the hosted service
+                                </td>
+
+                                <td>
+                                    Suitable for learning
+                                    self-hosted WordPress
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="info-box">
+
+                    <strong>
+                        For this practical project
+                    </strong>
+
+                    <p>
+                        We are learning the
+                        <strong>self-hosted WordPress workflow</strong>:
+                        choose hosting → install WordPress →
+                        manage the website from the dashboard.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 03 DOMAIN HOSTING
+            ================================== -->
+
+            <section class="wp-section" id="domain-hosting">
+
+                <div class="wp-section-label">
+                    Step 03
+                </div>
+
+                <h2>
+                    Domain & Hosting
+                </h2>
+
+                <p>
+                    Before installing WordPress on a live website,
+                    you need a domain and suitable hosting.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Choose a Domain
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Choose a short, relevant and easy-to-remember
+                        domain name for your project.
+                    </p>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Keep it simple.
+                        </li>
+
+                        <li>
+                            Avoid unnecessary numbers and symbols.
+                        </li>
+
+                        <li>
+                            Choose an extension suitable for the project.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Choose Hosting
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Choose hosting that supports WordPress and
+                        provides the resources required for your project.
+                    </p>
+
+                    <ul class="step-list">
+
+                        <li>
+                            WordPress support
+                        </li>
+
+                        <li>
+                            SSL/HTTPS
+                        </li>
+
+                        <li>
+                            Database support
+                        </li>
+
+                        <li>
+                            Control panel
+                        </li>
+
+                        <li>
+                            Backup and security options
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="resource-links">
+
+                    <a href="https://www.squarebrothers.in/"
+                       target="_blank"
+                       rel="noopener"
+                       class="resource-link">
+
+                        <i class="fa-solid fa-globe"></i>
+                        Domain / Hosting Provider
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 04 INSTALL WORDPRESS
+            ================================== -->
+
+            <section class="wp-section" id="install-wordpress">
+
+                <div class="wp-section-label">
+                    Step 04
+                </div>
+
+                <h2>
+                    Install WordPress on Hosting
+                </h2>
+
+                <p>
+                    Most WordPress-compatible hosting providers offer
+                    an installer from the hosting control panel.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Login to Hosting Control Panel
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Use the login details provided by your
+                        hosting provider.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Find the WordPress Installer
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Look for a WordPress installer or application
+                        installer in the hosting dashboard.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            3
+                        </div>
+
+                        <h3>
+                            Enter Website Details
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Website name
+                        </li>
+
+                        <li>
+                            Admin username
+                        </li>
+
+                        <li>
+                            Strong admin password
+                        </li>
+
+                        <li>
+                            Admin email
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            4
+                        </div>
+
+                        <h3>
+                            Complete Installation
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Complete the installation and open your
+                        WordPress admin area.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 05 LOGIN
+            ================================== -->
+
+            <section class="wp-section" id="login">
+
+                <div class="wp-section-label">
+                    Step 05
+                </div>
+
+                <h2>
+                    Login to WordPress Dashboard
+                </h2>
+
+                <p>
+                    After installation, use the WordPress admin
+                    login page to manage your website.
+                </p>
+
+                <div class="info-box">
+
+                    <strong>
+                        Common admin URL
+                    </strong>
+
+                    <p>
+                        <code>https://yourdomain.com/wp-admin</code>
+                    </p>
+
+                </div>
+
+                <div class="warning-box">
+
+                    <strong>
+                        Security Tip
+                    </strong>
+
+                    <p>
+                        Never share your WordPress admin password
+                        with others. Use a strong password and
+                        enable additional security where available.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 06 DASHBOARD
+            ================================== -->
+
+            <section class="wp-section" id="dashboard">
+
+                <div class="wp-section-label">
+                    Step 06
+                </div>
+
+                <h2>
+                    Understand the WordPress Dashboard
+                </h2>
+
+                <p>
+                    The dashboard is the control area from which
+                    you manage your website.
+                </p>
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-item">
+                        <strong>Posts</strong>
+                        <span>
+                            Create and manage blog content.
+                        </span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <strong>Pages</strong>
+                        <span>
+                            Create static website pages.
+                        </span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <strong>Media</strong>
+                        <span>
+                            Upload and manage images and files.
+                        </span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <strong>Appearance</strong>
+                        <span>
+                            Manage themes and website appearance.
+                        </span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <strong>Plugins</strong>
+                        <span>
+                            Add additional website functionality.
+                        </span>
+                    </div>
+
+                    <div class="dashboard-item">
+                        <strong>Settings</strong>
+                        <span>
+                            Configure important website settings.
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 07 THEME
+            ================================== -->
+
+            <section class="wp-section" id="theme">
+
+                <div class="wp-section-label">
+                    Step 07
+                </div>
+
+                <h2>
+                    Choose and Configure a Theme
+                </h2>
+
+                <p>
+                    A WordPress theme controls much of the visual
+                    appearance and layout of the website.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Open Themes
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Go to the Appearance section of your
+                        WordPress dashboard and explore the
+                        available themes.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Choose a Suitable Theme
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Suitable for the business
+                        </li>
+
+                        <li>
+                            Mobile responsive
+                        </li>
+
+                        <li>
+                            Clean navigation
+                        </li>
+
+                        <li>
+                            Easy to customize
+                        </li>
+
+                        <li>
+                            Good performance
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Select one theme and explain why it is
+                        suitable for your chosen business.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 08 PAGES
+            ================================== -->
+
+            <section class="wp-section" id="pages">
+
+                <div class="wp-section-label">
+                    Step 08
+                </div>
+
+                <h2>
+                    Create Website Pages
+                </h2>
+
+                <p>
+                    Create the pages planned during Module 3.
+                </p>
+
+                <div class="info-box">
+
+                    <strong>
+                        Example Business Website
+                    </strong>
+
+                    <p>
+                        Home → About → Services → Blog → Contact
+                    </p>
+
+                </div>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Create the Required Pages
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Home
+                        </li>
+
+                        <li>
+                            About
+                        </li>
+
+                        <li>
+                            Services / Products
+                        </li>
+
+                        <li>
+                            Contact
+                        </li>
+
+                        <li>
+                            Privacy Policy
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Create the pages required for your chosen
+                        business and add meaningful content to each page.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 09 MENU
+            ================================== -->
+
+            <section class="wp-section" id="menu">
+
+                <div class="wp-section-label">
+                    Step 09
+                </div>
+
+                <h2>
+                    Create Navigation Menu
+                </h2>
+
+                <p>
+                    Users should be able to move between important
+                    pages easily.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Plan Navigation
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Use the website structure created in Module 3.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Add Important Pages
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Add the required pages to your website navigation.
+                    </p>
+
+                </div>
+
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Create a clear navigation menu and test every
+                        menu item on desktop and mobile.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 10 PLUGINS
+            ================================== -->
+
+            <section class="wp-section" id="plugins">
+
+                <div class="wp-section-label">
+                    Step 10
+                </div>
+
+                <h2>
+                    Install and Manage Plugins
+                </h2>
+
+                <p>
+                    Plugins add additional functionality to WordPress.
+                </p>
+
+                <div class="info-box">
+
+                    <strong>
+                        Examples
+                    </strong>
+
+                    <p>
+                        Contact forms, SEO, security, caching,
+                        analytics, e-commerce and other features
+                        can be added through suitable plugins.
+                    </p>
+
+                </div>
+
+                <div class="warning-box">
+
+                    <strong>
+                        Important
+                    </strong>
+
+                    <p>
+                        Do not install unnecessary plugins.
+                        Too many plugins can make website management
+                        and maintenance more difficult.
+                    </p>
+
+                </div>
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Identify the functionality your website needs
+                        and select only the necessary plugins.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 11 FORMS
+            ================================== -->
+
+            <section class="wp-section" id="forms">
+
+                <div class="wp-section-label">
+                    Step 11
+                </div>
+
+                <h2>
+                    Add a Contact Form
+                </h2>
+
+                <p>
+                    A business website should provide a simple way
+                    for visitors to contact the business.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Choose a Form Solution
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Use a suitable WordPress form plugin or
+                        form solution supported by your setup.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Create the Form
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Name
+                        </li>
+
+                        <li>
+                            Email
+                        </li>
+
+                        <li>
+                            Phone number when necessary
+                        </li>
+
+                        <li>
+                            Message
+                        </li>
+
+                        <li>
+                            Submit button
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Submit a test enquiry and verify that the
+                        website receives the enquiry correctly.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 12 CONTENT
+            ================================== -->
+
+            <section class="wp-section" id="content">
+
+                <div class="wp-section-label">
+                    Step 12
+                </div>
+
+                <h2>
+                    Add Website Content
+                </h2>
+
+                <p>
+                    Now add the actual content planned for your business.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Write Useful Content
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Clear headings
+                        </li>
+
+                        <li>
+                            Short readable paragraphs
+                        </li>
+
+                        <li>
+                            Relevant images
+                        </li>
+
+                        <li>
+                            Business information
+                        </li>
+
+                        <li>
+                            Clear calls to action
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        AI Content Reminder
+                    </strong>
+
+                    <p>
+                        AI can help create drafts, ideas and variations,
+                        but students must review facts, wording,
+                        accuracy and usefulness before publishing.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 13 WOOCOMMERCE
+            ================================== -->
+
+            <section class="wp-section" id="woocommerce">
+
+                <div class="wp-section-label">
+                    Step 13
+                </div>
+
+                <h2>
+                    Set Up WooCommerce
+                </h2>
+
+                <p>
+                    If your project is an e-commerce website,
+                    WooCommerce can be used to add online store
+                    functionality to WordPress.
+                </p>
+
+                <div class="path-flow">
+
+                    <span class="path-item">
+                        WordPress
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        WooCommerce
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Products
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Cart
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Checkout
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Orders
+                    </span>
+
+                </div>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Install WooCommerce
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Install and activate WooCommerce from
+                        the WordPress plugin area.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Complete Store Setup
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Store location
+                        </li>
+
+                        <li>
+                            Currency
+                        </li>
+
+                        <li>
+                            Product settings
+                        </li>
+
+                        <li>
+                            Shipping settings when applicable
+                        </li>
+
+                        <li>
+                            Payment settings when applicable
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 14 PRODUCTS
+            ================================== -->
+
+            <section class="wp-section" id="products">
+
+                <div class="wp-section-label">
+                    Step 14
+                </div>
+
+                <h2>
+                    Add Products
+                </h2>
+
+                <p>
+                    Create a small product catalogue for your
+                    e-commerce project.
+                </p>
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            1
+                        </div>
+
+                        <h3>
+                            Create Product Categories
+                        </h3>
+
+                    </div>
+
+                    <p>
+                        Use the category structure planned in Module 3.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-heading">
+
+                        <div class="step-number">
+                            2
+                        </div>
+
+                        <h3>
+                            Add Products
+                        </h3>
+
+                    </div>
+
+                    <ul class="step-list">
+
+                        <li>
+                            Product name
+                        </li>
+
+                        <li>
+                            Description
+                        </li>
+
+                        <li>
+                            Product image
+                        </li>
+
+                        <li>
+                            Price
+                        </li>
+
+                        <li>
+                            Category
+                        </li>
+
+                        <li>
+                            Stock information when applicable
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="practical-box">
+
+                    <h3>
+                        Student Task
+                    </h3>
+
+                    <p>
+                        Create at least 3 categories and 10 products
+                        for the final e-commerce project.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 15 SEO
+            ================================== -->
+
+            <section class="wp-section" id="seo">
+
+                <div class="wp-section-label">
+                    Step 15
+                </div>
+
+                <h2>
+                    Apply Basic SEO
+                </h2>
+
+                <p>
+                    Your WordPress website should be optimized so
+                    search engines can understand and discover it.
+                </p>
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            SEO Title
+                        </strong>
+
+                        <span>
+                            Create a clear and relevant page title.
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            Meta Description
+                        </strong>
+
+                        <span>
+                            Write a useful description that matches
+                            the page content.
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            URL
+                        </strong>
+
+                        <span>
+                            Keep URLs short and meaningful.
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            Headings
+                        </strong>
+
+                        <span>
+                            Use logical H1, H2 and H3 structure.
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            Images
+                        </strong>
+
+                        <span>
+                            Compress images and add useful alt text.
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-item">
+
+                        <strong>
+                            Internal Links
+                        </strong>
+
+                        <span>
+                            Connect related pages naturally.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        Continue with Module 6 & Module 7
+                    </strong>
+
+                    <p>
+                        Use the SEO concepts from Module 6 and the
+                        tools and Search Console workflow from Module 7
+                        to complete the optimization and audit.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 16 SECURITY
+            ================================== -->
+
+            <section class="wp-section" id="security">
+
+                <div class="wp-section-label">
+                    Step 16
+                </div>
+
+                <h2>
+                    Basic Security & Backup
+                </h2>
+
+                <p>
+                    Website security is part of responsible website management.
+                </p>
+
+                <ul class="wp-checklist">
+
+                    <li>
+                        Use a strong administrator password.
+                    </li>
+
+                    <li>
+                        Keep WordPress updated.
+                    </li>
+
+                    <li>
+                        Keep themes and plugins updated.
+                    </li>
+
+                    <li>
+                        Remove unused plugins and themes.
+                    </li>
+
+                    <li>
+                        Use HTTPS.
+                    </li>
+
+                    <li>
+                        Maintain regular backups.
+                    </li>
+
+                    <li>
+                        Use appropriate user roles.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- =================================
+                 17 TEST
+            ================================== -->
+
+            <section class="wp-section" id="testing">
+
+                <div class="wp-section-label">
+                    Step 17
+                </div>
+
+                <h2>
+                    Test the Website
+                </h2>
+
+                <p>
+                    Before publishing the final project, test the
+                    website as a real visitor would use it.
+                </p>
+
+                <ul class="wp-checklist">
+
+                    <li>
+                        Homepage loads correctly.
+                    </li>
+
+                    <li>
+                        Navigation links work.
+                    </li>
+
+                    <li>
+                        Contact form works.
+                    </li>
+
+                    <li>
+                        Images load correctly.
+                    </li>
+
+                    <li>
+                        Website works on mobile.
+                    </li>
+
+                    <li>
+                        HTTPS works correctly.
+                    </li>
+
+                    <li>
+                        Product pages work if e-commerce is used.
+                    </li>
+
+                    <li>
+                        Cart and checkout flow are tested if applicable.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- =================================
+                 18 PUBLISH
+            ================================== -->
+
+            <section class="wp-section" id="publish">
+
+                <div class="wp-section-label">
+                    Step 18
+                </div>
+
+                <h2>
+                    Publish the Website
+                </h2>
+
+                <p>
+                    Once the website is complete and tested,
+                    it is ready to be presented as your final project.
+                </p>
+
+                <div class="path-flow">
+
+                    <span class="path-item">
+                        Build
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Test
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        SEO
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Search Console
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Audit
+                    </span>
+
+                    <span class="path-arrow">
+                        →
+                    </span>
+
+                    <span class="path-item">
+                        Submit
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 19 PRACTICAL
+            ================================== -->
+
+            <section class="wp-section" id="practical">
+
+                <div class="wp-section-label">
+                    Step 19
+                </div>
+
+                <h2>
+                    Student Practical
+                </h2>
+
+                <p>
+                    Now build your own WordPress website by following
+                    the workflow you learned above.
+                </p>
+
+                <div class="practical-box">
+
+                    <h3>
+                        Your Task
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Choose a business.
+                        </li>
+
+                        <li>
+                            Choose a domain.
+                        </li>
+
+                        <li>
+                            Set up suitable hosting.
+                        </li>
+
+                        <li>
+                            Install WordPress.
+                        </li>
+
+                        <li>
+                            Select a suitable theme.
+                        </li>
+
+                        <li>
+                            Create the required pages.
+                        </li>
+
+                        <li>
+                            Create navigation.
+                        </li>
+
+                        <li>
+                            Add necessary plugins.
+                        </li>
+
+                        <li>
+                            Add a contact form.
+                        </li>
+
+                        <li>
+                            Add WooCommerce if your project is an
+                            e-commerce website.
+                        </li>
+
+                        <li>
+                            Add and optimize content.
+                        </li>
+
+                        <li>
+                            Apply basic SEO.
+                        </li>
+
+                        <li>
+                            Connect Google Search Console.
+                        </li>
+
+                        <li>
+                            Test and audit the website.
+                        </li>
+
+                        <li>
+                            Submit the final project.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================
+                 20 CHECKLIST
+            ================================== -->
+
+            <section class="wp-section" id="checklist">
+
+                <div class="wp-section-label">
+                    Step 20
+                </div>
+
+                <h2>
+                    Final WordPress Checklist
+                </h2>
+
+                <p>
+                    Check everything before submitting your project.
+                </p>
+
+                <ul class="wp-checklist">
+
+                    <li>
+                        Domain is connected correctly.
+                    </li>
+
+                    <li>
+                        HTTPS is working.
+                    </li>
+
+                    <li>
+                        WordPress is updated.
+                    </li>
+
+                    <li>
+                        Theme is configured correctly.
+                    </li>
+
+                    <li>
+                        Required pages are created.
+                    </li>
+
+                    <li>
+                        Navigation is working.
+                    </li>
+
+                    <li>
+                        Contact form is tested.
+                    </li>
+
+                    <li>
+                        Necessary plugins are installed.
+                    </li>
+
+                    <li>
+                        WooCommerce is configured if required.
+                    </li>
+
+                    <li>
+                        Products and categories are added if required.
+                    </li>
+
+                    <li>
+                        Cart and checkout are tested if required.
+                    </li>
+
+                    <li>
+                        SEO basics are completed.
+                    </li>
+
+                    <li>
+                        Website is mobile responsive.
+                    </li>
+
+                    <li>
+                        Website is tested on the final domain.
+                    </li>
+
+                    <li>
+                        Search Console is connected.
+                    </li>
+
+                    <li>
+                        Final SEO audit is completed.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- =================================
+                 RESOURCES
+            ================================== -->
+
+            <section class="wp-section">
+
+                <div class="wp-section-label">
+                    Official Resources
+                </div>
+
+                <h2>
+                    Learn More
+                </h2>
+
+                <p>
+                    Use official documentation when you need
+                    additional information.
+                </p>
+
+                <div class="resource-links">
+
+                    <a href="https://wordpress.org/"
+                       target="_blank"
+                       rel="noopener"
+                       class="resource-link">
+
+                        <i class="fa-brands fa-wordpress"></i>
+                        WordPress.org
+
+                    </a>
+
+
+                    <a href="https://wordpress.org/documentation/"
+                       target="_blank"
+                       rel="noopener"
+                       class="resource-link">
+
+                        <i class="fa-solid fa-book"></i>
+                        WordPress Documentation
+
+                    </a>
+
+
+                    <a href="https://woocommerce.com/documentation/"
+                       target="_blank"
+                       rel="noopener"
+                       class="resource-link">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        WooCommerce Documentation
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================
+         FINAL CTA
+    ========================================== -->
+
+    <section class="wp-final">
+
+        <i class="fa-solid fa-laptop-code"></i>
+
+        <h2>
+            Ready to Build?
+        </h2>
+
+        <p>
+            Use this guide while building your WordPress project,
+            then return to the Capstone page to complete the final
+            website, SEO audit and submission.
+        </p>
+
+        <div class="wp-final-actions">
+
+            <a href="capstone.html" class="wp-btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Capstone
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                © <span id="currentYear"></span>
+                Web & E-Commerce Lab
+            </p>
+
+            <p>
+                Practical Web Skills for Digital Marketing Students
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        document.getElementById("currentYear").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>
