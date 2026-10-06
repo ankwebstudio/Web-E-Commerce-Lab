@@ -1,1 +1,2268 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Module 5 — AI Content Creation | WebTech & E-Commerce</title>
+
+    <meta name="description"
+        content="Module 5: Practical AI Content Creation for Digital Marketing students — product descriptions, blogs, landing pages, prompts and content calendars.">
+
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* ==========================================
+           MODULE 5
+           AI CONTENT CREATION
+        ========================================== */
+
+        .module-page {
+            font-family: "DM Sans", sans-serif;
+            color: #17212b;
+        }
+
+        /* ==========================================
+           HERO
+        ========================================== */
+
+        .module-hero {
+            padding: 80px 20px 70px;
+            background: linear-gradient(135deg, #f2f8ff, #ffffff);
+            border-bottom: 1px solid #e5edf5;
+        }
+
+        .module-hero-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .back-link:hover {
+            color: #174db7;
+        }
+
+        .module-label {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 30px;
+            background: #fcecf5;
+            color: #d61f75;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .08em;
+            margin-bottom: 15px;
+        }
+
+        .module-hero h1 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(2.1rem, 5vw, 3.5rem);
+            margin: 0 0 15px;
+            line-height: 1.12;
+        }
+
+        .module-hero h1 span {
+            color: #d61f75;
+        }
+
+        .module-hero p {
+            max-width: 760px;
+            color: #5f6d7a;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* ==========================================
+           COMMON SECTIONS
+        ========================================== */
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .section.alt {
+            background: #f8fbff;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-heading {
+            margin-bottom: 32px;
+        }
+
+        .section-heading .label {
+            color: #2563eb;
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+        }
+
+        .section-heading h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            margin: 8px 0 10px;
+        }
+
+        .section-heading p {
+            max-width: 760px;
+            color: #687785;
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           OBJECTIVES
+        ========================================== */
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .objective-card,
+        .topic-card,
+        .prompt-part,
+        .practical-card,
+        .assignment-box,
+        .quiz-box {
+            background: #fff;
+            border: 1px solid #e1eaf2;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(31, 72, 110, .05);
+        }
+
+        .objective-card i,
+        .topic-card i,
+        .prompt-part i {
+            color: #d61f75;
+            font-size: 1.45rem;
+            margin-bottom: 13px;
+        }
+
+        .objective-card h3,
+        .topic-card h3,
+        .prompt-part h3,
+        .practical-card h3 {
+            margin: 0 0 9px;
+            font-family: "Manrope", sans-serif;
+        }
+
+        .objective-card p,
+        .topic-card p,
+        .prompt-part p,
+        .practical-card p {
+            color: #647381;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* ==========================================
+           AI CONTENT TYPES
+        ========================================== */
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .concept-box {
+            margin-top: 25px;
+            padding: 22px 24px;
+            background: #eef7ff;
+            border-left: 4px solid #2563eb;
+            border-radius: 10px;
+            color: #405466;
+            line-height: 1.7;
+        }
+
+        .concept-box strong {
+            color: #1857ad;
+        }
+
+        /* ==========================================
+           PROMPT STRUCTURE
+        ========================================== */
+
+        .prompt-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .prompt-part {
+            padding: 20px;
+        }
+
+        .prompt-part h3 {
+            font-size: 1rem;
+        }
+
+        .prompt-formula {
+            margin-top: 25px;
+            padding: 22px;
+            background: #fff5fa;
+            border: 1px solid #f4cfe1;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .prompt-formula strong {
+            display: block;
+            color: #b71962;
+            margin-bottom: 8px;
+        }
+
+        .prompt-formula span {
+            color: #5f5960;
+            line-height: 1.7;
+        }
+
+        /* ==========================================
+           DEMO PROMPT
+        ========================================== */
+
+        .demo-box {
+            background: #17212b;
+            color: #f5f8fb;
+            border-radius: 16px;
+            padding: 28px;
+            line-height: 1.8;
+            overflow-x: auto;
+        }
+
+        .demo-title {
+            color: #8fd9ff;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .demo-box p {
+            margin: 7px 0;
+        }
+
+        .demo-box strong {
+            color: #ffffff;
+        }
+
+        /* ==========================================
+           WORKFLOW
+        ========================================== */
+
+        .workflow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+        }
+
+        .workflow-step {
+            text-align: center;
+            padding: 22px 14px;
+            border: 1px solid #e1eaf2;
+            border-radius: 14px;
+            background: #fff;
+        }
+
+        .workflow-step .number {
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            border-radius: 50%;
+            background: #fcecf5;
+            color: #d61f75;
+            font-weight: 700;
+        }
+
+        .workflow-step strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .workflow-step small {
+            color: #74818c;
+            line-height: 1.5;
+        }
+
+        /* ==========================================
+           FACT CHECK
+        ========================================== */
+
+        .check-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .check-item {
+            padding: 20px;
+            border: 1px solid #e1eaf2;
+            border-radius: 13px;
+            background: #fff;
+        }
+
+        .check-item i {
+            color: #15966b;
+            margin-right: 7px;
+        }
+
+        .check-item p {
+            color: #667582;
+            line-height: 1.6;
+            margin: 8px 0 0;
+        }
+
+        /* ==========================================
+           PRACTICAL
+        ========================================== */
+
+        .practical-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .practical-card {
+            position: relative;
+        }
+
+        .practical-number {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #eaf4ff;
+            color: #2563eb;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .practical-card ul,
+        .assignment-box ul {
+            padding-left: 20px;
+            color: #5f6e79;
+            line-height: 1.8;
+        }
+
+        .deliverable {
+            margin-top: 17px;
+            padding: 13px 15px;
+            border-radius: 9px;
+            background: #f7fafc;
+            color: #4d5d68;
+            font-size: .93rem;
+        }
+
+        /* ==========================================
+           ASSIGNMENT
+        ========================================== */
+
+        .assignment-box {
+            max-width: 850px;
+            margin: auto;
+            border-top: 4px solid #d61f75;
+        }
+
+        .assignment-box h3 {
+            font-family: "Manrope", sans-serif;
+            margin-top: 0;
+        }
+
+        /* ==========================================
+           QUIZ
+        ========================================== */
+
+        .quiz-box {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .quiz-question {
+            margin-bottom: 25px;
+        }
+
+        .quiz-question > p {
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .quiz-option {
+            display: block;
+            padding: 11px 13px;
+            margin: 7px 0;
+            background: #f8fbff;
+            border: 1px solid #e1eaf2;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .quiz-option:hover {
+            border-color: #9cc9f0;
+        }
+
+        .quiz-result {
+            display: none;
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 9px;
+            background: #eef7ff;
+            color: #1857ad;
+            font-weight: 700;
+        }
+
+        /* ==========================================
+           MODULE COMPLETE
+        ========================================== */
+
+        .module-complete {
+            text-align: center;
+        }
+
+        .module-complete p {
+            max-width: 680px;
+            margin: 0 auto 25px;
+            color: #687785;
+            line-height: 1.7;
+        }
+
+        .module-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .module-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 19px;
+            border-radius: 9px;
+            text-decoration: none;
+            border: 1px solid #cbdbe8;
+            color: #2563eb;
+            background: #fff;
+            font-weight: 600;
+        }
+
+        .module-btn.primary {
+            background: #2563eb;
+            border-color: #2563eb;
+            color: #fff;
+        }
+
+        .module-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ==========================================
+           NAVBAR
+        ========================================== */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, .96);
+            border-bottom: 1px solid #e5edf5;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-nav a.active {
+            color: #2563eb;
+        }
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+
+        .site-footer {
+            margin-top: 0;
+            background: #f2f8ff;
+            border-top: 1px solid #dce9f4;
+        }
+
+        .footer-content {
+            padding-top: 40px;
+            padding-bottom: 35px;
+        }
+
+        /* ==========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            .prompt-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .workflow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                border-bottom: 1px solid #e5edf5;
+                flex-direction: column;
+            }
+
+            .main-nav.show {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .objective-grid,
+            .topic-grid,
+            .practical-grid,
+            .check-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .prompt-grid,
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+
+            .module-hero {
+                padding-top: 60px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body class="module-page">
+
+
+    <!-- ==========================================
+         HEADER
+    ========================================== -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </span>
+
+                <span>
+                    <strong>WebTech</strong>
+                    <small>&amp; E-Commerce</small>
+                </span>
+
+            </a>
+
+
+            <nav class="main-nav" id="mainNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="index.html#modules" class="active">
+                    Modules
+                </a>
+
+                <a href="index.html#learning-flow">
+                    How It Works
+                </a>
+
+                <a href="index.html#capstone">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </nav>
+
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==========================================
+             MODULE HERO
+        ========================================== -->
+
+        <section class="module-hero">
+
+            <div class="module-hero-inner">
+
+                <a href="index.html#modules" class="back-link">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Modules
+
+                </a>
+
+
+                <span class="module-label">
+                    MODULE 05 • AI CONTENT
+                </span>
+
+
+                <h1>
+                    AI Content
+                    <span>Creation</span>
+                </h1>
+
+
+                <p>
+
+                    Learn how to use AI as a practical content assistant
+                    for websites, e-commerce products, blogs, landing pages
+                    and content planning — while keeping human review and
+                    fact-checking at every stage.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             LEARNING OBJECTIVES
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        LEARNING OBJECTIVES
+                    </span>
+
+                    <h2>
+                        What You Will Learn
+                    </h2>
+
+                    <p>
+
+                        By the end of this module, students should be able
+                        to use AI to create and improve different types
+                        of digital content.
+
+                    </p>
+
+                </div>
+
+
+                <div class="objective-grid">
+
+
+                    <div class="objective-card">
+
+                        <i class="fa-solid fa-pen-to-square"></i>
+
+                        <h3>
+                            AI Copywriting
+                        </h3>
+
+                        <p>
+
+                            Use AI to create website copy,
+                            product descriptions, landing page
+                            content and blog drafts.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                        <h3>
+                            Prompt Writing
+                        </h3>
+
+                        <p>
+
+                            Create clear prompts using role,
+                            task, audience, context, tone,
+                            constraints and output format.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <h3>
+                            Content Planning
+                        </h3>
+
+                        <p>
+
+                            Generate useful blog ideas and
+                            a simple 7-day content calendar
+                            for a business.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="objective-card">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <h3>
+                            Review &amp; Fact-Check
+                        </h3>
+
+                        <p>
+
+                            Check AI output for accuracy,
+                            relevance, tone and unsupported
+                            claims before publishing.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             AI CONTENT TYPES
+        ========================================== -->
+
+        <section class="section alt">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        CONCEPT
+                    </span>
+
+                    <h2>
+                        Where Can AI Help?
+                    </h2>
+
+                    <p>
+
+                        AI can support many parts of a digital marketer's
+                        content workflow. The final content should still
+                        be reviewed and edited by a human.
+
+                    </p>
+
+                </div>
+
+
+                <div class="topic-grid">
+
+
+                    <div class="topic-card">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        <h3>
+                            Website Content
+                        </h3>
+
+                        <p>
+
+                            Home page headlines, About sections,
+                            service descriptions, FAQs and
+                            calls to action.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        <h3>
+                            Product Descriptions
+                        </h3>
+
+                        <p>
+
+                            Create structured product copy using
+                            real product details, audience and
+                            desired tone.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <i class="fa-solid fa-newspaper"></i>
+
+                        <h3>
+                            Blog Content
+                        </h3>
+
+                        <p>
+
+                            Generate topic ideas, outlines and
+                            first drafts that can later be
+                            edited and verified.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="topic-card">
+
+                        <i class="fa-solid fa-bullhorn"></i>
+
+                        <h3>
+                            Landing Pages
+                        </h3>
+
+                        <p>
+
+                            Develop headline, supporting copy,
+                            benefits and CTA ideas for a
+                            campaign or product page.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="concept-box">
+
+                    <strong>
+                        Key idea:
+                    </strong>
+
+                    AI is a content assistant. It can help with
+                    speed and ideas, but students are responsible
+                    for checking the final content before it is published.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PROMPT STRUCTURE
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        PROMPT WRITING
+                    </span>
+
+                    <h2>
+                        How to Write a Useful Prompt
+                    </h2>
+
+                    <p>
+
+                        A good prompt gives AI enough information
+                        to understand exactly what the marketer needs.
+
+                    </p>
+
+                </div>
+
+
+                <div class="prompt-grid">
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <h3>
+                            Role
+                        </h3>
+
+                        <p>
+                            Tell AI what role or perspective
+                            it should use.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-list-check"></i>
+
+                        <h3>
+                            Task
+                        </h3>
+
+                        <p>
+                            Clearly explain what you want
+                            AI to create.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <h3>
+                            Audience
+                        </h3>
+
+                        <p>
+                            Describe who will read or use
+                            the content.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <h3>
+                            Context
+                        </h3>
+
+                        <p>
+                            Give relevant business, product
+                            or campaign information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <h3>
+                            Tone
+                        </h3>
+
+                        <p>
+                            Specify the writing style such
+                            as natural or professional.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-sliders"></i>
+
+                        <h3>
+                            Constraints
+                        </h3>
+
+                        <p>
+                            Set limits such as word count
+                            or claims to avoid.
+                        </p>
+
+                    </div>
+
+
+                    <div class="prompt-part">
+
+                        <i class="fa-solid fa-table-list"></i>
+
+                        <h3>
+                            Output Format
+                        </h3>
+
+                        <p>
+                            Specify headings, bullets, table,
+                            paragraph or another format.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="prompt-formula">
+
+                    <strong>
+                        Prompt Formula
+                    </strong>
+
+                    <span>
+                        Role + Task + Audience + Context +
+                        Tone + Constraints + Output Format
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             LIVE DEMO
+        ========================================== -->
+
+        <section class="section alt">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        LIVE DEMO
+                    </span>
+
+                    <h2>
+                        Demo: Women's Cotton Kurti
+                    </h2>
+
+                    <p>
+
+                        Use a real product example and show students
+                        how detailed instructions can produce more useful output.
+
+                    </p>
+
+                </div>
+
+
+                <div class="demo-box">
+
+                    <div class="demo-title">
+                        SAMPLE AI PROMPT
+                    </div>
+
+
+                    <p>
+                        <strong>Role:</strong>
+                        Act as an e-commerce copywriter.
+                    </p>
+
+
+                    <p>
+                        <strong>Task:</strong>
+                        Write a product description for a women's cotton kurti.
+                    </p>
+
+
+                    <p>
+                        <strong>Audience:</strong>
+                        Women in Kerala aged 20–35.
+                    </p>
+
+
+                    <p>
+                        <strong>Context:</strong>
+                        The product is a comfortable cotton kurti
+                        suitable for everyday use. Use only the
+                        product information provided.
+                    </p>
+
+
+                    <p>
+                        <strong>Tone:</strong>
+                        Natural, simple and conversion-focused.
+                    </p>
+
+
+                    <p>
+                        <strong>Constraints:</strong>
+                        Do not make unsupported claims. Do not invent
+                        product features, certifications, discounts
+                        or specifications.
+                    </p>
+
+
+                    <p>
+                        <strong>Output:</strong>
+                        Product title, short description,
+                        key features and CTA.
+                    </p>
+
+                </div>
+
+
+                <div class="concept-box">
+
+                    <strong>
+                        Teaching point:
+                    </strong>
+
+                    Students should give AI real information
+                    about the product instead of asking AI
+                    to invent missing facts.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             AI CONTENT WORKFLOW
+        ========================================== -->
+
+        <section class="section">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        PRACTICAL WORKFLOW
+                    </span>
+
+                    <h2>
+                        Generate → Review → Edit → Verify → Publish
+                    </h2>
+
+                    <p>
+
+                        Follow this workflow whenever AI is used
+                        for content creation.
+
+                    </p>
+
+                </div>
+
+
+                <div class="workflow">
+
+
+                    <div class="workflow-step">
+
+                        <div class="number">
+                            01
+                        </div>
+
+                        <strong>
+                            Understand
+                        </strong>
+
+                        <small>
+                            Know the business, product
+                            and content goal.
+                        </small>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="number">
+                            02
+                        </div>
+
+                        <strong>
+                            Prompt
+                        </strong>
+
+                        <small>
+                            Give AI clear instructions
+                            and context.
+                        </small>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="number">
+                            03
+                        </div>
+
+                        <strong>
+                            Generate
+                        </strong>
+
+                        <small>
+                            Create the first
+                            content draft.
+                        </small>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="number">
+                            04
+                        </div>
+
+                        <strong>
+                            Review
+                        </strong>
+
+                        <small>
+                            Check facts, relevance
+                            and tone.
+                        </small>
+
+                    </div>
+
+
+                    <div class="workflow-step">
+
+                        <div class="number">
+                            05
+                        </div>
+
+                        <strong>
+                            Publish
+                        </strong>
+
+                        <small>
+                            Edit and use the final
+                            approved version.
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             FACT CHECK
+        ========================================== -->
+
+        <section class="section alt">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        QUALITY CHECK
+                    </span>
+
+                    <h2>
+                        Review AI Output Before Publishing
+                    </h2>
+
+                    <p>
+
+                        Students should never treat an AI response
+                        as automatically correct.
+
+                    </p>
+
+                </div>
+
+
+                <div class="check-grid">
+
+
+                    <div class="check-item">
+
+                        <strong>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Check Facts
+
+                        </strong>
+
+                        <p>
+
+                            Verify prices, specifications,
+                            business details, dates and
+                            other factual information.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <strong>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Check Audience
+
+                        </strong>
+
+                        <p>
+
+                            Make sure the language matches
+                            the target customer's needs.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <strong>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Check Tone
+
+                        </strong>
+
+                        <p>
+
+                            Remove repetitive, unnatural
+                            or overly generic wording.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="check-item">
+
+                        <strong>
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Edit Before Publishing
+
+                        </strong>
+
+                        <p>
+
+                            Add real business knowledge and
+                            make the content fit the actual
+                            website or product.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             STUDENT PRACTICAL
+        ========================================== -->
+
+        <section class="section" id="practical">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        STUDENT PRACTICAL
+                    </span>
+
+                    <h2>
+                        Use AI on Your Own Project
+                    </h2>
+
+                    <p>
+
+                        Continue using the same business/project
+                        from Modules 1–4. The goal is to apply
+                        AI content creation to the real project.
+
+                    </p>
+
+                </div>
+
+
+                <div class="practical-grid">
+
+
+                    <!-- Practical 01 -->
+
+                    <div class="practical-card">
+
+                        <div class="practical-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Create 5 Product Descriptions
+                        </h3>
+
+                        <p>
+
+                            Select five products from your
+                            e-commerce project and create
+                            AI-assisted descriptions.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Use real product information.
+                            </li>
+
+                            <li>
+                                Define the target audience.
+                            </li>
+
+                            <li>
+                                Specify tone and output format.
+                            </li>
+
+                            <li>
+                                Review and edit every result.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="deliverable">
+
+                            <strong>
+                                Deliverable:
+                            </strong>
+
+                            5 reviewed product descriptions.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Practical 02 -->
+
+                    <div class="practical-card">
+
+                        <div class="practical-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Create 2 Blog Ideas
+                        </h3>
+
+                        <p>
+
+                            Generate two useful blog topics
+                            related to your chosen business.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Blog title/topic.
+                            </li>
+
+                            <li>
+                                Target audience.
+                            </li>
+
+                            <li>
+                                Search intent.
+                            </li>
+
+                            <li>
+                                Short content outline.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="deliverable">
+
+                            <strong>
+                                Deliverable:
+                            </strong>
+
+                            2 blog ideas with outlines.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Practical 03 -->
+
+                    <div class="practical-card">
+
+                        <div class="practical-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Create 1 Landing Page Draft
+                        </h3>
+
+                        <p>
+
+                            Create a landing page draft for
+                            one product, service or campaign.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Headline.
+                            </li>
+
+                            <li>
+                                Supporting copy.
+                            </li>
+
+                            <li>
+                                Benefits.
+                            </li>
+
+                            <li>
+                                Call to action.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="deliverable">
+
+                            <strong>
+                                Deliverable:
+                            </strong>
+
+                            1 edited landing page draft.
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Practical 04 -->
+
+                    <div class="practical-card">
+
+                        <div class="practical-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Create a 7-Day Content Calendar
+                        </h3>
+
+                        <p>
+
+                            Use AI to plan one week of content
+                            for the chosen business.
+
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Day/date.
+                            </li>
+
+                            <li>
+                                Content topic.
+                            </li>
+
+                            <li>
+                                Content format.
+                            </li>
+
+                            <li>
+                                Short caption or content idea.
+                            </li>
+
+                        </ul>
+
+
+                        <div class="deliverable">
+
+                            <strong>
+                                Deliverable:
+                            </strong>
+
+                            7-day content calendar.
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             ASSIGNMENT
+        ========================================== -->
+
+        <section class="section alt" id="assignment">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        ASSIGNMENT
+                    </span>
+
+                    <h2>
+                        AI Content Pack
+                    </h2>
+
+                    <p>
+
+                        Create a small AI-assisted content pack
+                        for the same business used in your project.
+
+                    </p>
+
+                </div>
+
+
+                <div class="assignment-box">
+
+                    <h3>
+                        Submit
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            5 product descriptions.
+                        </li>
+
+                        <li>
+                            2 blog ideas with outlines.
+                        </li>
+
+                        <li>
+                            1 landing page draft.
+                        </li>
+
+                        <li>
+                            7-day content calendar.
+                        </li>
+
+                        <li>
+                            At least 2 prompts used during the work.
+                        </li>
+
+                        <li>
+                            Final edited and fact-checked content.
+                        </li>
+
+                    </ul>
+
+
+                    <div class="concept-box">
+
+                        <strong>
+                            Expected outcome:
+                        </strong>
+
+                        Students should be able to use AI as a
+                        practical content assistant while keeping
+                        human review, editing and fact-checking.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             QUIZ
+        ========================================== -->
+
+        <section class="section" id="quiz">
+
+            <div class="section-inner">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        QUICK QUIZ
+                    </span>
+
+                    <h2>
+                        Check Your Understanding
+                    </h2>
+
+                    <p>
+                        Answer the questions before moving to Module 6.
+                    </p>
+
+                </div>
+
+
+                <div class="quiz-box">
+
+                    <form id="module5Quiz">
+
+
+                        <!-- Question 1 -->
+
+                        <div class="quiz-question">
+
+                            <p>
+                                1. Which combination makes a prompt more useful?
+                            </p>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q1"
+                                    value="a">
+
+                                Only the word "write"
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q1"
+                                    value="b">
+
+                                Role, task, audience and context
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q1"
+                                    value="c">
+
+                                Only the website URL
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- Question 2 -->
+
+                        <div class="quiz-question">
+
+                            <p>
+                                2. What should you do before publishing AI-generated content?
+                            </p>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q2"
+                                    value="a">
+
+                                Publish it immediately
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q2"
+                                    value="b">
+
+                                Remove all business information
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q2"
+                                    value="c">
+
+                                Review, edit and verify it
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- Question 3 -->
+
+                        <div class="quiz-question">
+
+                            <p>
+                                3. What should students avoid when creating product content with AI?
+                            </p>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q3"
+                                    value="a">
+
+                                Giving real product information
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q3"
+                                    value="b">
+
+                                Inventing unsupported product claims
+
+                            </label>
+
+
+                            <label class="quiz-option">
+
+                                <input type="radio"
+                                    name="q3"
+                                    value="c">
+
+                                Defining a target audience
+
+                            </label>
+
+                        </div>
+
+
+
+                        <button type="button"
+                            class="module-btn primary"
+                            onclick="checkQuiz()">
+
+                            Check Answers
+
+                        </button>
+
+
+                        <div class="quiz-result"
+                            id="quizResult">
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             MODULE COMPLETE
+        ========================================== -->
+
+        <section class="section alt">
+
+            <div class="section-inner module-complete">
+
+                <div class="section-heading">
+
+                    <span class="label">
+                        MODULE COMPLETE
+                    </span>
+
+                    <h2>
+                        Ready for SEO?
+                    </h2>
+
+                    <p>
+
+                        You have learned how to create AI-assisted
+                        content for your project. Next, you will learn
+                        how to optimize websites and e-commerce pages
+                        for search engines.
+
+                    </p>
+
+                </div>
+
+
+                <div class="module-buttons">
+
+
+                    <a href="module4.html"
+                        class="module-btn">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Module 4
+
+                    </a>
+
+
+                    <a href="module6.html"
+                        class="module-btn primary">
+
+                        Module 6: SEO
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+
+            <div class="footer-brand">
+
+                <a href="index.html"
+                    class="logo">
+
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+
+                    <span>
+
+                        <strong>
+                            WebTech
+                        </strong>
+
+                        <small>
+                            &amp; E-Commerce
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <p>
+
+                    A practical learning portal for
+                    Digital Marketing students.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Learn
+                </h4>
+
+                <a href="index.html#modules">
+                    Modules
+                </a>
+
+                <a href="index.html#learning-flow">
+                    How It Works
+                </a>
+
+                <a href="index.html#capstone">
+                    Capstone
+                </a>
+
+                <a href="index.html#resources">
+                    Resources
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-links">
+
+                <h4>
+                    Module 5
+                </h4>
+
+                <a href="#practical">
+                    Practical
+                </a>
+
+                <a href="#assignment">
+                    Assignment
+                </a>
+
+                <a href="#quiz">
+                    Quiz
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                <p>
+
+                    © <span id="currentYear"></span>
+
+                    WebTech &amp; E-Commerce Learning Portal.
+
+                    All rights reserved.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        /* Mobile Navigation */
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const mainNav =
+            document.getElementById("mainNav");
+
+
+        if (menuToggle) {
+
+            menuToggle.addEventListener(
+                "click",
+                function () {
+
+                    mainNav.classList.toggle("show");
+
+                }
+            );
+
+        }
+
+
+
+        /* Current Year */
+
+        const currentYear =
+            document.getElementById("currentYear");
+
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+
+        /* Quiz */
+
+        function checkQuiz() {
+
+            const answers = {
+
+                q1: "b",
+                q2: "c",
+                q3: "b"
+
+            };
+
+
+            let score = 0;
+
+
+            Object.keys(answers).forEach(
+                function (question) {
+
+                    const selected =
+                        document.querySelector(
+                            'input[name="' +
+                            question +
+                            '"]:checked'
+                        );
+
+
+                    if (
+                        selected &&
+                        selected.value ===
+                        answers[question]
+                    ) {
+
+                        score++;
+
+                    }
+
+                }
+            );
+
+
+            const result =
+                document.getElementById(
+                    "quizResult"
+                );
+
+
+            result.style.display =
+                "block";
+
+
+            result.textContent =
+                "Your score: " +
+                score +
+                " / 3";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
