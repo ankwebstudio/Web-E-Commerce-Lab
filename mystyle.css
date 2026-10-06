@@ -927,79 +927,206 @@ section {
 }
 
 
-/* ==========================================
-   RESOURCES
-========================================== */
+/* =========================================
+   RESOURCES SECTION
+========================================= */
 
 .resources-section {
-    padding: 100px 0;
-
-    background: var(--background);
+    padding: 90px 20px;
+    background: #ffffff;
 }
+
+.resources-section .section-title {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.resources-section .small-title {
+    color: #0099cc;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.resources-section .section-title h2 {
+    margin: 0 0 15px;
+    color: #19333d;
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.resources-section .section-title p {
+    margin: 0;
+    color: #687b83;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RESOURCES GRID
+========================================= */
 
 .resources-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+
     display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
+
+
+/* =========================================
+   RESOURCE CARD
+========================================= */
 
 .resource-card {
     display: flex;
-    align-items: center;
-    gap: 13px;
+    flex-direction: column;
 
-    padding: 18px;
+    padding: 30px;
+    min-height: 260px;
 
-    background: white;
+    background: #ffffff;
+    border: 1px solid #e2f0f5;
+    border-radius: 16px;
 
-    border: 1px solid var(--border);
-    border-radius: 14px;
+    text-decoration: none;
 
-    transition: 0.25s ease;
+    box-shadow: 0 8px 25px rgba(0, 80, 110, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .resource-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
+    transform: translateY(-6px);
+    border-color: #b9e4f2;
+    box-shadow: 0 14px 35px rgba(0, 80, 110, 0.10);
 }
 
-.resource-icon {
-    width: 42px;
-    height: 42px;
 
-    flex-shrink: 0;
+/* =========================================
+   RESOURCE ICON
+========================================= */
+
+.resource-icon {
+    width: 52px;
+    height: 52px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: var(--primary-light);
-    color: var(--primary);
+    margin-bottom: 22px;
 
-    border-radius: 10px;
+    background: #eaf8fc;
+    color: #0099cc;
+
+    border-radius: 12px;
+
+    font-size: 22px;
 }
 
-.resource-card div:nth-child(2) {
+
+/* =========================================
+   RESOURCE TITLE
+========================================= */
+
+.resource-card h3 {
+    margin: 0 0 12px;
+
+    color: #19333d;
+
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+
+/* =========================================
+   RESOURCE DESCRIPTION
+========================================= */
+
+.resource-card p {
+    margin: 0;
+
+    color: #687b83;
+
+    font-size: 14px;
+    line-height: 1.7;
+
     flex: 1;
 }
 
-.resource-card h3 {
-    font-family: "Manrope", sans-serif;
+
+/* =========================================
+   RESOURCE LINK
+========================================= */
+
+.resource-card span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 22px;
+
+    color: #0099cc;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.resource-card span i {
     font-size: 12px;
+
+    transition: transform 0.2s ease;
 }
 
-.resource-card p {
-    color: var(--text-light);
-    font-size: 9px;
+.resource-card:hover span i {
+    transform: translateX(4px);
 }
 
-.resource-card > i {
-    color: #a2aab5;
-    font-size: 10px;
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
+
+@media (max-width: 600px) {
+
+    .resources-section {
+        padding: 65px 18px;
+    }
+
+    .resources-section .section-title h2 {
+        font-size: 30px;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .resource-card {
+        padding: 25px;
+        min-height: auto;
+    }
+
+}
 
 /* ==========================================
    FOOTER
