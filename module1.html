@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="mystyle.css">
     
     <style>
-        /* ==========================================
-        NAVBAR STYLE
+
+/* ==========================================
+   NAVBAR
 ========================================== */
 
-.navbar {
+.site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -46,53 +47,41 @@
     justify-content: space-between;
 }
 
-
 /* LOGO */
 
 .logo {
     text-decoration: none;
     color: #123044;
 
-    font-size: 17px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-
     display: flex;
     flex-direction: column;
     line-height: 1.1;
 }
 
-.logo span {
+.logo-main {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.logo-sub {
     margin-top: 5px;
-
     color: #0099cc;
-
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1.2px;
     text-transform: uppercase;
 }
 
-
 /* NAVIGATION */
 
-.nav-menu {
-    list-style: none;
-
+.main-nav {
     display: flex;
     align-items: center;
-
     gap: 6px;
-
-    margin: 0;
-    padding: 0;
 }
 
-.nav-menu li {
-    margin: 0;
-}
-
-.nav-menu a {
+.main-nav a {
     position: relative;
 
     display: inline-flex;
@@ -101,7 +90,6 @@
     padding: 10px 13px;
 
     color: #526773;
-
     text-decoration: none;
 
     font-size: 14px;
@@ -114,16 +102,15 @@
         background 0.2s ease;
 }
 
-.nav-menu a:hover {
+.main-nav a:hover {
     color: #0099cc;
     background: #f0f9fc;
 }
 
-.nav-menu a.active {
+.main-nav a.active {
     color: #0099cc;
     background: #eaf8fd;
 }
-
 
 /* MOBILE MENU BUTTON */
 
@@ -137,7 +124,6 @@
     border-radius: 8px;
 
     background: #ffffff;
-
     color: #17394b;
 
     font-size: 22px;
@@ -152,7 +138,7 @@
 
 
 /* ==========================================
-        FOOTER STYLE
+   FOOTER
 ========================================== */
 
 footer {
@@ -174,7 +160,6 @@ footer {
 
 .footer-container strong {
     display: block;
-
     color: #17394b;
 
     font-size: 16px;
@@ -192,21 +177,18 @@ footer {
     line-height: 1.7;
 }
 
-
-/* FOOTER RIGHT TEXT */
-
 .footer-container > div:last-child {
     text-align: right;
 }
 
 
 /* ==========================================
-        NAVBAR + FOOTER RESPONSIVE
+   RESPONSIVE
 ========================================== */
 
 @media (max-width: 900px) {
 
-    .nav-menu {
+    .main-nav {
         position: absolute;
 
         top: 74px;
@@ -227,19 +209,17 @@ footer {
         box-shadow: 0 8px 20px rgba(25, 70, 90, 0.06);
     }
 
-    .nav-menu.active {
+    .main-nav.active {
         display: flex;
     }
 
-    .nav-menu a {
+    .main-nav a {
         width: 100%;
-
         padding: 13px 15px;
     }
 
     .menu-toggle {
         display: flex;
-
         align-items: center;
         justify-content: center;
     }
@@ -252,9 +232,7 @@ footer {
     .footer-container > div:last-child {
         text-align: left;
     }
-
 }
-
 
 @media (max-width: 500px) {
 
@@ -263,24 +241,24 @@ footer {
         padding: 0 15px;
     }
 
-    .nav-menu {
+    .main-nav {
         top: 68px;
     }
 
-    .logo {
+    .logo-main {
         font-size: 15px;
     }
 
-    .logo span {
+    .logo-sub {
         font-size: 10px;
     }
 
     footer {
         padding: 35px 18px 25px;
     }
-
 }
-    </style>
+
+</style>
 
 </head>
 
@@ -358,12 +336,11 @@ footer {
 
             <div class="container">
 
-                <a href="modules.html"
-                    class="back-link">
+             <a href="index.html#modules" class="back-link">
 
-                    ← Back to Modules
+                ← Back to Modules
 
-                </a>
+            </a>
 
 
                 <span class="module-hero-number">
@@ -1880,55 +1857,54 @@ footer {
 
 
 
-        <!-- =========================
-             MODULE COMPLETE
-        ========================== -->
+       <!-- =========================
+     MODULE COMPLETE
+========================== -->
 
-        <section class="module-complete">
+<section class="module-complete">
 
-            <div class="container">
+    <div class="container">
 
-                <div class="complete-box">
+        <div class="complete-box">
 
-                    <span>
-                        MODULE 01
-                    </span>
+            <span>
+                MODULE 01 COMPLETE
+            </span>
 
-                    <h2>
-                        Ready for Module 2?
-                    </h2>
+            <h2>
+                Your Website Is Ready. What's Next?
+            </h2>
 
-                    <p>
-                        Next, learn how CMS platforms work
-                        and how WordPress, Shopify, WooCommerce
-                        and custom development differ.
-                    </p>
+            <p>
+                You have learned how domains, hosting, DNS and HTTPS
+                work and have published your existing website.
+                Next, you will learn different ways to build and
+                manage websites using CMS platforms and custom development.
+            </p>
 
+            <div class="complete-buttons">
 
-                    <div class="complete-buttons">
+                <a href="index.html#modules"
+                    class="secondary-btn">
 
-                        <a href="modules.html"
-                            class="secondary-btn">
+                    ← All Modules
 
-                            ← All Modules
+                </a>
 
-                        </a>
+                <a href="module-2.html"
+                    class="primary-btn">
 
+                    Start Module 2 →
 
-                        <a href="module-2.html"
-                            class="primary-btn">
-
-                            Module 2 →
-
-                        </a>
-
-                    </div>
-
-                </div>
+                </a>
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
     </main>
 
@@ -1938,26 +1914,34 @@ footer {
          FOOTER
     ========================== -->
 
-    <footer>
+
+<footer>
 
     <div class="footer-container">
 
         <div>
-            <strong>WEB & E-COMMERCE Learning Lab</strong>
+
+            <strong>
+                WEB & E-COMMERCE Learning Lab
+            </strong>
 
             <p>
                 Practical Web Skills for Digital Marketing Students
             </p>
+
         </div>
 
+
         <div>
+
             <p>
-                Module 4 — E-Commerce Application Development
+                Module 1 — Domain, Hosting & Website Setup
             </p>
 
             <p>
                 Learn • Build • Optimize
             </p>
+
         </div>
 
     </div>
